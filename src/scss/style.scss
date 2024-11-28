@@ -1,0 +1,14 @@
+@use './base/fonts';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-weight: 400;
+}
+span {
+    font-family: 'Comfortaa';
+    font-weight: 400;
+    color: darkcyan;
+}
