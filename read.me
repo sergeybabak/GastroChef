@@ -1,0 +1,19 @@
+Что делал поочередно:
+
+1. Подключил stele.scss в main.js:
+    import '/src/scss/style.scss';
+2. Установил в package.json
+    "devDependencies": {
+        "sass": "^1.86.3",
+        "vite": "^6.3.5",
+        "vite-plugin-handlebars": "^2.0.0"
+    }
+
+3. Подключил шрифты. 
+4. Подключил фавиконку.
+5. Создал в корне файл vite.config.mjs для импорта частей html.
+6. Указал его же в package.json:
+    "main": "vite.config.mjs",
+7. Подключил преобразование рх в rem. Для этого создал в корне файл postcss.config.js. 
+   Он использует src/js/px-to-rem.js, который самописный по указанию ИИ.
+8. 

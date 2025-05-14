@@ -1,0 +1,107 @@
+.mainmenu {
+    position: relative;
+
+    &__logo {
+        position: absolute;
+        left: -40px;
+        top: -100px;
+        display: flex;
+        width: 264px;
+        height: 264px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+        background: var(--F5FAFF);
+        justify-content: center;
+        align-items: center;
+
+        &-content {
+            font-family: Comfortaa;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 115.8%;
+            text-align: center;
+        }
+
+        &-text {
+            margin-top: -20px;
+        }
+    }
+
+    &__panel {
+        width: 233px;
+        height: 34px;
+        border-radius: 190px;
+        box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+        background-color: var(--F5FAFF);
+        display: none;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        width: 880px;
+        height: 52px;
+        border-radius: 190px;
+        box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+        background: var(--F5FAFF);
+
+        ul {
+            display: flex;
+            justify-content: end;
+            padding: 17px 40px;
+            margin: 0;
+            gap: 40px;
+            list-style-type: none;
+
+            li a {
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--text);
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__phone {
+        padding: 15px 30px;
+        border-radius: 190px;
+        box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+        background: var(--F5FAFF);
+
+        a {
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--64D370);
+            text-decoration: none;
+        }
+    }
+
+    &__lang {
+        display: flex;
+        padding-left: 270px;
+        padding-top: 20px;
+        gap: 10px;
+
+        &-item {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+            background-color: var(--F5FAFF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 400;
+            &_active {
+                background-color: var(--64D370);
+                color: var(--F4F9FE);
+            }
+        }
+    }
+}

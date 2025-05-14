@@ -1,0 +1,17 @@
+{
+  "name": "gastrochef",
+  "version": "1.0.0",
+  "main": "vite.config.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.3",
+    "vite": "^6.3.5",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
