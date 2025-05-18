@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "/src/scss/base/variables" as *;
+@use '/src/scss/base/mixins' as *;
+
 html {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
@@ -6,7 +10,45 @@ html {
     background-color: var(--F5FAFF);
     color: var(--020202);
 }
-
+// берем данные из миксина
 .container {
-    padding: 0 370px;
+    width: map.get($container-width, base);
+    margin: 0 auto;
+
+    @include respond(s1280) {
+        // padding: 0 map.get($container-paddings, s1280);
+        width: map.get($container-width, s1280);
+    }
+    @include respond(s768) {
+        width: map.get($container-width, s768);
+        padding: 0 map.get($container-paddings, s768);
+    }
+    @include respond(s576) {
+        padding: 0 map.get($container-paddings, s576);
+    }
+
+    
+
+    // @include respond(s1024) {
+    //     padding: 0 map.get($container-paddings, s1024);
+    // }
+
+    
+
+    // @include respond(s1536) {
+    //     padding: 0 map.get($container-paddings, s1536);
+    // }
 }
+
+// @media screen and (max-width: 1200px) {
+//     .container {
+//         width: 880px;
+//     }
+// }
+
+// @media screen and (max-width: 768px) {
+//     .container {
+//         width: auto;
+//         padding: 0 40px;
+//     }
+// }
