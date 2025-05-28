@@ -2,9 +2,18 @@
 @use "/src/scss/base/fonts";
 @use "/src/scss/base/variables";
 @use "/src/scss/base/mixins";
+@use "/src/scss/blocks/forall/animation";
 
 @use "/src/scss/blocks/global";
-@use "/src/scss/blocks/forall/buttons";
+// @use "/src/scss/blocks/forall/buttons";
 
+// menu
 @use "/src/scss/blocks/forall/mainmenu";
+@use "/src/scss/blocks/forall/leftmenu";
+
+// main page
+@use "/src/scss/blocks/main/main";
+@use "/src/scss/blocks/main/promo";
+
+
 

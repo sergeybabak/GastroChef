@@ -1,12 +1,28 @@
-
 @use "sass:map";
 @use '/src/scss/base/variables' as variables;
 
-// для контейнера
+// для container
 @mixin respond($breakpoint) {
   @media (max-width: map.get(variables.$breakpoints, $breakpoint)) {
     @content;
   }
+}
+
+// округлая форма для блоков
+@mixin box-white {
+  white-space: nowrap;
+  border-radius: 190px;
+  box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+  background: var(--F5FAFF);
+  // color: var(--64D370);
+}
+
+@mixin box-green {
+  white-space: nowrap;
+  border-radius: 190px;
+  box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+  background: var(--64D370);
+  color: var(--F5FAFF);
 }
 
 // @mixin before_circle {

@@ -2,7 +2,6 @@
     --F5FAFF: #F5FAFF;
     --020202: #020202;
     --00BA2D: #00BA2D;
-    --00BA2D: #00BA2D;
     --1890FF: #1890FF;
     --26F03A: #26F03A;
     --DEE6EE: #DEE6EE;
@@ -13,6 +12,7 @@
     --FC3766: #FC3766;
     --FE3666: #FE3666;
     --64D370: #64D370;
+    --64D270: #64D270;
 }
 // переменные для контейнера (паддинги и ширина)
 $breakpoints: (
@@ -25,8 +25,8 @@ $breakpoints: (
 
 $container-paddings: ( 
   s576: 20px,
-  s768: 40px,
-//   s1024: 48px
+  s1024: 50px,
+  s768: 40px
 //   s1280: 64px,
 //   s1536: 80px
 );
@@ -34,5 +34,5 @@ $container-paddings: (
 $container-width: (
     base: 1180px,
     s1280: 900px,
-    s768: auto
+    s1024: auto
 );

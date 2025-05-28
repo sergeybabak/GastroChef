@@ -1,5 +1,6 @@
 import '/src/scss/style.scss';
 
+// переключение языков
 let translations = {};
 let currentLang = "ru";
 
@@ -51,4 +52,26 @@ document.addEventListener("click", e => {
     e.target.classList.add('mainmenu__lang-item_active');
     loadLanguage("en");
   }
+});
+
+// гамбургер-меню
+const overlay = document.querySelector('.overlay'),
+      mainmenu__body = document.querySelector('.mainmenu__body'),
+      hamburger = document.querySelector('.mainmenu__hamburger-block');
+
+document.querySelector('.mainmenu__hamburger').addEventListener('click', () => {
+  overlay.classList.toggle('not-visible');
+  overlay.classList.toggle('is-visible');
+  mainmenu__body.style.top ? mainmenu__body.removeAttribute('style') : mainmenu__body.style.top = '0px';
+  if (hamburger.classList.contains('mainmenu__hamburger-active')) {
+    hamburger.classList.remove('mainmenu__hamburger-active');
+    hamburger.classList.add('mainmenu__hamburger-close');
+
+    setTimeout(() => {
+      hamburger.classList.remove('mainmenu__hamburger-close');
+    }, 2000);
+  } else {
+    hamburger.classList.add('mainmenu__hamburger-active');
+  }
+  
 });

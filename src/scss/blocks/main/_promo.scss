@@ -1,0 +1,54 @@
+@use "/src/scss/base/mixins" as *;
+
+.promo {
+    &__wrapper {
+        margin-top: 100px;
+    }
+
+    &__descr {
+        padding-top: 183px;
+        max-width: 609px;
+
+        span {
+            color: var(--64D270);
+        }
+
+        &-big {
+            font-family: Comfortaa;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 45px;
+            letter-spacing: 7px;
+        }
+
+        &-small {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 133.8%;
+        }
+    }
+
+    &__cost {
+        display: flex;
+        column-gap: 30px;
+        margin-top: 40px;
+        font-size: 20px;
+
+        &-btn {
+            @include box-green;
+            width: 280px;
+            height: 60px;
+            border: none;
+            font-family: Comfortaa;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        span {
+            font-family: Montserrat;
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+}
