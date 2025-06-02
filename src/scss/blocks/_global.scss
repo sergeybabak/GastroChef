@@ -2,7 +2,12 @@
 @use "/src/scss/base/variables" as *;
 @use '/src/scss/base/mixins' as *;
 
-html {
+// для немигания элементов с transition при обновлении экрана
+.preload * {
+    transition: none !important;
+}
+
+html, body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     margin: 0;
@@ -67,17 +72,3 @@ a {
     //     padding: 0 map.get($container-paddings, s1536);
     // }
 }
-
-
-// @media screen and (max-width: 1200px) {
-//     .container {
-//         width: 880px;
-//     }
-// }
-
-// @media screen and (max-width: 768px) {
-//     .container {
-//         width: auto;
-//         padding: 0 40px;
-//     }
-// }

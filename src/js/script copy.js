@@ -1,9 +1,5 @@
 import '/src/scss/style.scss';
 
-window.addEventListener('load', () => {
-  document.body.classList.remove('preload');
-});
-
 //// переключение языков
 let translations = {};
 let currentLang = "ru";
@@ -116,22 +112,16 @@ function delay(ms) {
 async function run(direction) {
   let numActive = num - 1; // порядок активного сейчас элемента карусели
 
-  if (typeof direction != 'number') { nextElement(direction); } else { num = direction; }
-
   img[numActive].classList.remove('promo__img-active');
   text[numActive].style.opacity = 0; // обесцвечиваем текущий элемент (текст слева)
+  await delay(1000);
 
-  setTimeout(() => {
-    img[num - 1].classList.add('promo__img-active');
-  }, 200);
-  // await delay(1000);
-
-  
+  if (typeof direction != 'number') { nextElement(direction); } else { num = direction; }
 
   rings[numActive].classList.remove('promo__navigator-ring-active');
   rings[num - 1].classList.add('promo__navigator-ring-active');
 
-  
+  img[num - 1].classList.add('promo__img-active');
   text[num - 1].classList.add('promo__descr-active');
   await delay(1000);
 

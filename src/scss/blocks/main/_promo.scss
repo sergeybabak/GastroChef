@@ -8,18 +8,25 @@
     padding-bottom: 20px;
 
     &__wrappercarousel {
-        position: relative;
-        margin-top: 100px;
+        // position: relative;
+        margin-top: 47px;
         display: flex;
+    }
+
+    &__leftcarousel {
+        position: relative;
+        width: 609px;
+        height: 600px;
+        overflow: hidden;
     }
 
     &__descr {
         position: absolute;
-        padding-top: 183px;
-        max-width: 609px;
+        padding-top: 194px;
+        width: 100%;
         left: -100%;
-        
-        // transform: translateX(-100%);
+        transition: all 1s ease;
+        transform: translateX(-100%);
 
         span {
             color: var(--64D270);
@@ -30,8 +37,9 @@
             font-size: 40px;
             font-weight: 700;
             line-height: 45px;
-            letter-spacing: 7px;
+            letter-spacing: 0.25em;
         }
+
         &-bigkob {
             font-size: 32px;
         }
@@ -42,20 +50,23 @@
             font-weight: 400;
             line-height: 133.8%;
         }
+
         &-active {
             left: 0;
+            transform: translateX(0);
         }
     }
 
     &__cost {
         display: flex;
+        align-items: start;
         column-gap: 30px;
         margin-top: 40px;
         font-size: 20px;
 
         &-btn {
             @include box-green;
-            width: 280px;
+            padding: 0 70px;
             height: 60px;
             border: none;
             font-family: Comfortaa;
@@ -71,38 +82,58 @@
         }
     }
 
-    &__img {
+    &__rightcarousel {
+        position: relative;
+        flex: 1;
+    }
+
+    &__rightbox {
         position: absolute;
-        left: 750px;
-        top: -50px;
+        left: 186px;
         width: 700px;
         height: 700px;
         border-radius: 100%;
-        border: 75px solid var(--F5FAFF);
+        border: 35px solid var(--F5FAFF);
         z-index: 2;
+        overflow: hidden;
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
+        transition: opacity 4s ease;
 
         img {
             display: block;
             object-fit: cover;
+            opacity: inherit;
+            left: 0;
+            top: 0;
         }
+
+        &-active {
+            opacity: 1;
+        }
+
         &-1 {
-            scale: .9;
-            transform: translateY(15px);
+            scale: .95;
+            transform: translateX(31px) translateY(53px);
         }
+
         &-2 {
-            scale: .9;
             transform: translateX(103px) translateY(-24px);
         }
+
         &-3 {
-            scale: .9;
-            transform: translateY(105px);
+            transform: translateY(111px);
         }
+
         &-4 {
-            scale: .9;
             transform: translateX(37px) translateY(-20px);
         }
     }
@@ -112,6 +143,7 @@
         align-items: center;
         gap: 15px;
         justify-content: center;
+        padding-inline-start: 0;
 
         &-left {
             span {
@@ -159,6 +191,7 @@
             &-active {
                 width: 14px;
                 height: 14px;
+
                 &::before {
                     content: '';
                     position: absolute;
@@ -181,5 +214,172 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promo {
+        min-height: 397px;
+
+        &__leftcarousel {
+            width: 240px;
+            margin-left: 90px;
+        }
+
+        &__leftcarousel {
+            height: 250px;
+        }
+
+        &__descr {
+            padding-top: 40px;
+
+            &-big {
+                font-size: 18px;
+                line-height: 20px;
+            }
+
+            &-small {
+                font-size: 12px;
+                letter-spacing: 0.2em;
+                margin-top: 10px;
+            }
+        }
+
+        &__cost {
+            margin-top: 25px;
+            flex-direction: column;
+            row-gap: 10px;
+
+            &-btn {
+                padding: 0 30px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            &-amount {
+                font-size: 12px;
+
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &__rightbox {
+            width: 307px;
+            height: 307px;
+            left: 68px;
+            border: 17px solid var(--F5FAFF);
+        }
+
+        &__img {
+            &-1 {
+                scale: 0.41;
+                transform: translateX(32px) translateY(53px);
+            }
+
+            &-2 {
+                scale: 0.41;
+            }
+
+            &-3 {
+                scale: 0.41;
+            }
+
+            &-4 {
+                scale: 0.41;
+            }
+        }
+
+        &__navigator {
+            margin-left: 90px;
+            justify-content: start;
+        }
+    }
+
+    .circle-big {
+        width: 765px;
+        height: 765px;
+        left: 400px;
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .left__menu {
+        display: none;
+    }
+
+    .promo {
+        min-height: 330px;
+        &__wrappercarousel {
+            flex-direction: column-reverse;
+        }
+        &__leftcarousel {
+            margin: 0;
+            margin-left: 30px;
+            width: 205px;
+            height: 240px;
+        }
+        &__descr {
+            &-big, &-bigkob {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            &-small {
+                margin-top: 5px;
+                font-size: 10px;
+            }
+        }
+        &__cost {
+            row-gap: 8px;
+            &-btn {
+                font-size: 14px;
+                height: 33px;
+            }
+            &-amount {
+                font-size: 10px;
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+        &__rightbox {
+            top: -131px;
+            left: 117px;
+            width: 127px;
+            height: 127px;
+            border: 8px solid var(--F5FAFF);
+        }
+        &__img {
+            &-1 {
+                scale: 0.17;
+            }
+
+            &-2 {
+                scale: 0.17;
+            }
+
+            &-3 {
+                scale: 0.17;
+            }
+
+            &-4 {
+                scale: 0.2;
+            }
+        }
+        &__navigator {
+            margin: 0 0 0 30px;
+        }
+    }
+
+    .circle-big {
+        width: 518px;
+        height: 518px;
+        top: -236px;
+        left: -2px;
     }
 }
