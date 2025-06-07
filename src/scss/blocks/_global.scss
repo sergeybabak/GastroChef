@@ -31,7 +31,7 @@ a {
     left: 0;
     background: rgba(2, 2, 2, 0.85);
     transition: opacity 1s ease-in-out;
-    // z-index: 2;
+    z-index: 2;
 }
 .is-visible {
     opacity: 1;

@@ -9,9 +9,11 @@
     width: 1294px;
     height: 1294px;
     left: 950px;
+    // right: -320px;
     top: -100px;
     border-radius: 100%;
     background-color: var(--64D370);
+    box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.4);
 }
 .circle-small {
     position: absolute;

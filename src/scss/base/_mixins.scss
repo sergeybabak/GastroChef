@@ -24,6 +24,30 @@
   background: var(--64D370);
   color: var(--F5FAFF);
 }
+// шрифты для promo -> descr
+@mixin promo-descr($big, $small) {
+  .promo__descr {
+            .promo__descr-big,
+            .promo__descr-bigkob {
+                font-size: $big;
+                line-height: $big;
+            }
+            .promo__descr-small {
+                font-size: $small;
+            }
+        }
+}
+//
+@mixin promo-rightbox($diameter, $border, $scale) {
+      .promo__rightbox {
+        width: $diameter;
+        height: $diameter;
+        border: $border solid var(--F5FAFF);
+      }
+      .promo__img-1,.promo__img-2,.promo__img-3,.promo__img-4 {
+        scale: $scale;
+      }
+}
 
 // @mixin before_circle {
 //     &:before {

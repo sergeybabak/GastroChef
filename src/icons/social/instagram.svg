@@ -1,0 +1,18 @@
+<svg width="30.000000" height="30.000000" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<pattern id="pattern_739_38300" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+			<use xlink:href="#image739_3830_0" transform="matrix(0.021739,0,0,0.021739,0,0)"/>
+		</pattern>
+		<image id="image739_3830_0" width="46.000000" height="46.000000" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAABHNCSVQICAgIfAhkiAAAA2NJREFUaIHdmjFLHEEUx38eChrv8CBgxCJnZXJFGiUQFIs0fgBTiCjBItgkVb5AYmcbTOxSGM4miH1SaBFPAmmsorESUdRwhRJFQcQU8zb3brO3M3t3utn8YZjdnTfv/Xfu7cx7M9dE/egCHgNDwH2gF8gC7dJ+ChwBW8Am8AVYAQ4aYDsy0sAUUASuaixF0ZG+CcIZ4BVQqoOwv5REZ+a6SI8Cew0k7C97YqNhSAOFayTsLwUa4D45zAd1U6S9sim2a8IDYDcG0l7ZFQ6RkIuZtCbvPPJp4nGPMLf5y+ebAogXgHHXtxT8BM7U/QVm4QGzELWotjagM6L+BWAiTGAUt1EoAdNAP9AakQTSp090uK4JVafKDG7z9DyNXSwyotNmd0/bbVYKXgLdFiMfgElRlMW41CBwl0o/bAI65PpY5D2cADuYJX8BE8dMStvTENvdwnFaP0xj/8lKlN/4IXBokXcph6IL0e3CoeJDnXIw4r1ptk7Sl8AbYAY4F11Z0T3t0H9KE3eJ8vpE9kWdozyv7M7Is+dy3+fQvwjGx7uAAez4LrVNdg1YwsTfYOLzEdWvXcm2ST0IvFM2wjCA4cwYbr7oYbWKzAEwHGJwWGSugEXMyF/K/aqSc3HDsWZM5mKDXlyCIrdD4BGwLfd5zCiC+Wk3gM8i8xV44uuvdZ5hxxDAMvY33Fad1gPavZG+RXAIXJA2RNbfvq70bzvwWQa3YCqMeFG1hcXtBSXnnwyiEt9NUZ6KwnChrv3xzZLUecJjnHGR0X2CdF5gRzZF5VdeDafqusPX9kPqQezwZLZ8z7XOU+xoTzkI/ZNI4fiG6vrY13ZP6iJ2eDK9vudap5MHpDBBjg06nr7ytY1IvYEJmqphQWR0nyCdLdhxBAmeDucaQPwA6FEyeeCZlLx63kN59ayH+BzEs+T7S01L/kqIMQ+dmHTrHJMEBE19d4BP2IOsIOxI3YpbPvqHs0tY2y+y9Ya1QSVyWOvhJhMJf9mnnFlFTiTiSt32qTF185LlE2AWeE113AbeYhLbb5iFZwLju7Uky2uYmPyXyL8XG2GYlf4ViHN74qOD3YrtCT8SsyH032zBQUI2PashRwK3mT0kcmPfQ44EHqV4SOThlUbijgs1EnlAqxH7kXjQAhQVsfwJ4Td/PhCXMycLGwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<mask id="mask739_3830" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="30.000000" height="30.000000">
+		<rect id="instagram" width="30.000000" height="30.000000" fill="url(#pattern_739_38300)" fill-opacity="1.000000"/>
+	</mask>
+	<g mask="url(#mask739_3830)">
+		<circle id="Ellipse 6" cx="15.000000" cy="15.000000" r="15.000000" fill="#020202" fill-opacity="1.000000"/>
+		<circle id="Ellipse 6" cx="15.000000" cy="15.000000" r="14.500000" stroke="#FFFFFF" stroke-opacity="0" stroke-width="1.000000"/>
+	</g>
+</svg>

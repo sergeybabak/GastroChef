@@ -1,0 +1,120 @@
+.services {
+    display: table;
+    position: relative;
+    padding: 40px 60px 43px 60px;
+    border-radius: 30px;
+    background: rgba(245, 250, 255, 0.8);
+    margin: 50px auto 0 auto;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 28px;
+        text-align: center;
+    }
+
+    &__item {
+        flex: 1 1 0;
+        /* равная ширина + возможность сжиматься */
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 500;
+
+    }
+
+    &__img {
+        min-height: 127px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .services {
+        margin: 0 auto;
+
+        &__items {
+            column-gap: 10px;
+        }
+
+        &__item {
+            font-size: 10px;
+        }
+
+        &__img {
+            min-height: 100px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .services {
+        display: block;
+        position: static;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        margin-top: 50px;
+
+        &__wrapper {
+            position: relative;
+            padding: 20px 30px 23px 30px;
+            border-radius: 30px;
+            background: rgba(245, 250, 255, 0.8);
+        }
+        &__items {
+            column-gap: 5px;
+        }
+        &__item {
+            font-size: 9px;
+        }
+        &__img {
+            min-height: 70px;
+            margin-bottom: 5px;
+
+            img {
+                scale: 0.7;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        &__wrapper {
+            padding: 10px 30px 23px 30px;
+        }
+
+        &__item {
+            font-size: 8px;
+        }
+
+        &__img {
+            min-height: 70px;
+
+            img {
+                scale: 0.62;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services {
+        margin-top: 30px;
+        &__wrapper {
+            padding: 0;
+        }
+        &__items {
+            flex-wrap: wrap;
+            column-gap: 30px;
+            row-gap: 15px;
+        }
+        &__item {
+            flex: 1 1 calc(33.333% - 12px); /* по умолчанию 3 в ряд */
+        }
+    }
+}

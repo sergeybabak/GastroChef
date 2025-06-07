@@ -151,7 +151,7 @@
             flex-wrap: wrap;
             margin: 0;
             column-gap: 40px;
-            row-gap: 10px;
+            row-gap: 5px;
             list-style-type: none;
 
             li a {
@@ -326,7 +326,7 @@
 
 @media screen and (max-width: 576px) {
     .mainmenu {
-        margin-top: 34px;
+        // margin-top: 34px;
 
         &__wrapper {
             position: relative;
@@ -336,11 +336,19 @@
             margin: 0;
             width: 139px;
             height: 139px;
+            z-index: 2;
         }
 
-        &__panel,
-        &__phone-circle,
+        &__panel {
+            display: block;
+            z-index: 1;
+        }
+        &__phone-circle {
+            display: flex;
+            z-index: 2;
+        }
         &__hamburger {
+            z-index: 4;
             display: flex;
         }
 
@@ -353,6 +361,7 @@
             border-radius: 0px 0px 50px 50px;
             transition: all 1s;
             background-color: var(--F5FAFF);
+            z-index: 3;
         }
 
         &__list {

@@ -28,6 +28,8 @@
 </head>
 
 <body class="preload">
+    {{> messenger }}
+
     <div class="overlay not-visible"></div>
     <div class="main_page">
         <div class="left__menu">
@@ -193,100 +195,136 @@
                     </div>
                 </div>
             </div>
-            <div class="promo">
-                <div class="promo__wrappercarousel">
-                    <div class="promo__leftcarousel">
-                        <div class="promo__descr promo__descr-1 promo__descr-active">
-                            <div class="promo__descr-big">Detox программа – <span>вкусное очищение</span> организма
-                            </div>
-                            <div class="promo__descr-small">8 бутылочек <span>натуральных</span> смузи и фрешей.</div>
-                            <div class="promo__cost">
-                                <button class="promo__cost-btn">Заказать</button>
-                                <div class="promo__cost-amount">
-                                    Пробный день всего: <br>
-                                    <span>427 грн</span>
-                                </div>
-                            </div>
+        </div>
+        <div class="promo">
+            <div class="promo__leftcarousel">
+                <div class="promo__leftbox">
+                    <div class="promo__descr promo__descr-1 promo__descr-active">
+                        <div class="promo__descr-big promo__descr-big_1LG">Detox программа – <span>вкусное очищение</span> организма
                         </div>
-                        <div class="promo__descr promo__descr-2">
-                            <div class="promo__descr-big">
-                                Сервис правильного питания. <br> <span>Худей быстро!</span>
-                            </div>
-                            <div class="promo__cost">
-                                <button class="promo__cost-btn">Заказать</button>
-                                <div class="promo__cost-amount">
-                                    Пробный день: <br>
-                                    <span>-30%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="promo__descr promo__descr-3">
-                            <div class="promo__descr-bigkob">
-                                <span> Доверьтесь профессионалам.</span> <br> Я Кобылинский Кирилл - <br>основатель.
-                            </div>
-                            <div class="promo__descr-small">
-                                <span>Мастер спорта</span> Украины по тяжелой атлетике. <br> <span>Высшее образование</span>
-                                института физкультуры(НуфвсУ).
-                            </div>
-                            <div class="promo__cost">
-                                <button class="promo__cost-btn">Мой инстаграм</button>
-                                <div class="promo__cost-amount">
-                                    Всегда открыт <br> для клиентов
-                                </div>
-                            </div>
-                        </div>
-                        <div class="promo__descr promo__descr-4">
-                            <div class="promo__descr-big">
-                                Кето питание - <span>вкусное и экстремальное</span> быстрое похудение
-                            </div>
-                            <div class="promo__descr-small">
-                                4 приема пищи.
-                            </div>
-                            <div class="promo__cost">
-                                <button class="promo__cost-btn">Заказать</button>
-                                <div class="promo__cost-amount">
-                                    Пробный день <br>
-                                    <span>от 490грн</span>
-                                </div>
+                        <div class="promo__descr-small promo__descr-small_1LG">8 бутылочек <span>натуральных</span> смузи и фрешей.</div>
+                        <div class="promo__cost">
+                            <button class="promo__cost-btn">Заказать</button>
+                            <div class="promo__cost-amount promo__cost-amount_1LG">
+                                Пробный день всего: <br>
+                                <span>427 грн</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="promo__rightcarousel">
-                        <div class="promo__rightbox">
-                            <div class="promo__img promo__img-active"><img class="promo__img-1" src="/src/img/main/promo/slider1.png" alt="slide1"></div>
-                            <div class="promo__img"><img class="promo__img-2" src="/src/img/main/promo/slider2.jpeg" alt="slide2"></div>
-                            <div class="promo__img"><img class="promo__img-3" src="/src/img/main/promo/Kirill.jpeg" alt="slide2"></div>
-                            <div class="promo__img"><img class="promo__img-4" src="/src/img/main/promo/slider3.jpeg" alt="slide2"></div>
+                    <div class="promo__descr promo__descr-2">
+                        <div class="promo__descr-big promo__descr-big_2LG">
+                            Сервис правильного питания. <br> <span>Худей быстро!</span>
+                        </div>
+                        <div class="promo__cost">
+                            <button class="promo__cost-btn">Заказать</button>
+                            <div class="promo__cost-amount promo__cost-amount_2LG">
+                                Пробный день: <br>
+                                <span>-30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo__descr promo__descr-3">
+                        <div class="promo__descr-bigkob promo__descr-big_3LG">
+                            <span> Доверьтесь профессионалам.</span> <br> Я Кобылинский Кирилл - <br>основатель.
+                        </div>
+                        <div class="promo__descr-small promo__descr-small_2LG">
+                            <span>Мастер спорта</span> Украины по тяжелой атлетике. <br> <span>Высшее
+                                образование</span>
+                            института физкультуры(НуфвсУ).
+                        </div>
+                        <div class="promo__cost">
+                            <button class="promo__cost-btn promo__cost-btn_LG">Мой инстаграм</button>
+                            <div class="promo__cost-amount promo__cost-amount_3LG">
+                                Всегда открыт <br> для клиентов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo__descr promo__descr-4">
+                        <div class="promo__descr-big promo__descr-big_4LG">
+                            Кето питание - <span>вкусное и экстремальное</span> быстрое похудение
+                        </div>
+                        <div class="promo__descr-small promo__descr-small_3LG">
+                            4 приема пищи.
+                        </div>
+                        <div class="promo__cost">
+                            <button class="promo__cost-btn">Заказать</button>
+                            <div class="promo__cost-amount promo__cost-amount_4LG">
+                                Пробный день <br>
+                                <span>от 490грн</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <ul class="promo__navigator">
-                    <li><a href="javascript:void(0)">
-                            <div class="promo__navigator-left"><span></span><span></span></div>
-                        </a></li>
-                    <li><a href="javascript:void(0)">
-                            <div class="promo__navigator-ring promo__navigator-ring-active"></div>
-                        </a></li>
-                    <li><a href="javascript:void(0)">
-                            <div class="promo__navigator-ring"></div>
-                        </a></li>
-                    <li><a href="javascript:void(0)">
-                            <div class="promo__navigator-ring"></div>
-                        </a></li>
-                    <li><a href="javascript:void(0)">
-                            <div class="promo__navigator-ring"></div>
-                        </a></li>
-                    <li><a href="javascript:void(0)">
-                            <div class="promo__navigator-right"><span></span><span></span></div>
-                        </a></li>
-                </ul>
+            </div>
+            <div class="promo__rightcarousel">
+                <div class="promo__rightbox">
+                    <div class="promo__img promo__img-active"><img class="promo__img-1"
+                            src="/src/img/main/promo/slider1.png" alt="slide1"></div>
+                    <div class="promo__img"><img class="promo__img-2" src="/src/img/main/promo/slider2.jpeg"
+                            alt="slide2"></div>
+                    <div class="promo__img"><img class="promo__img-3" src="/src/img/main/promo/Kirill.jpeg"
+                            alt="slide2"></div>
+                    <div class="promo__img"><img class="promo__img-4" src="/src/img/main/promo/slider3.jpeg"
+                            alt="slide2"></div>
+                </div>
+            </div>
+            <ul class="promo__navigator">
+                <li><a href="javascript:void(0)">
+                        <div class="promo__navigator-left"><span></span><span></span></div>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <div class="promo__navigator-ring promo__navigator-ring-active"></div>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <div class="promo__navigator-ring"></div>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <div class="promo__navigator-ring"></div>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <div class="promo__navigator-ring"></div>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <div class="promo__navigator-right"><span></span><span></span></div>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div class="services">
+            <div class="container">
+                <div class="services__wrapper">
+                    <div class="services__items">
+                        <div class="services__item">
+                            <div class="services__img"><img src="/src/icons/main/services/eco.png" alt="eco"></div>
+                            Бережём природу. Эко-тара и проборы.
+                        </div>
+                        <div class="services__item">
+                            <div class="services__img"><img src="/src/icons/main/services/hand.png" alt="hand"></div>
+                            28 дней без повторения, более 300 блюд!
+                        </div>
+                        <div class="services__item">
+                            <div class="services__img"><img src="/src/icons/main/services/time.png" alt="time"></div>
+                            Бесплатно заменяем блюда и ингредиенты.
+                        </div>
+                        <div class="services__item">
+                            <div class="services__img"><img src="/src/icons/main/services/night.png" alt="night"></div>
+                            Готовим ночью, упаковываем и отправляем Вам!
+                        </div>
+                        <div class="services__item">
+                            <div class="services__img"><img src="/src/icons/main/services/car.png" alt="car"></div>
+                            Ежедневная удобная и бесплатная доставка с 6:00 до 10:00
+                        </div>
+                        <div class="services__item">
+                            <div class="services__img"><img src="/src/icons/main/services/clock.png" alt="clock"></div>
+                            Сохраняем Вашу энергию и до 14 часов в неделю освобождая от готовки!
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
-
-    <!-- {{> footer }} -->
-
+    
     <script type="module" src="/src/js/script.js"></script>
 </body>
 

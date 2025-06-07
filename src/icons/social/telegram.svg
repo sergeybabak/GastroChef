@@ -1,0 +1,20 @@
+<svg width="33.672852" height="33.672699" viewBox="0 0 33.6729 33.6727" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<pattern id="pattern_739_35590" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+			<use xlink:href="#image739_3559_0" transform="matrix(0.021739,0,0,0.021739,0,0)"/>
+		</pattern>
+		<image id="image739_3559_0" width="46.000000" height="46.000000" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAABHNCSVQICAgIfAhkiAAAAu1JREFUaIHV2k9oVFcUBvBfYutCkyCoJVolrqQLXYgUhQYX3YqllILFLlWyVlTEVVAQrRvBlYJCF4Ws3FTFVbpxSjetu2KEUpCJiAQUjKBiiIv7XrgZZybvX2Z8H5zVu/d839x337nnnDsDymMU32IcX2EnNmB98vw1XuIxHuEBpvGsAu7cGMIEGlgsaI3Ex1AvBI9gEnMlBLfaXOJzZLVEH8ZshYJbbTbhqAzDmFpFwa02lXCWwhhmeig6tZmEuxB2o9kH0ak1Ew25MNZn0bH4zCs/rD/bo9u2ybTne/khZrWplUQf/gREdrKOoXLE6sbpsjYrOqQGI+EnsbXTr/oEsFXQuAxDqj3G89gCXmUcO5doXVrxn7Gx7JLkxAzO4MuE+98MczYKWpdQJsvLY69wE9+0EXU/o49GOmG0B4IbOKp7PH6aw98oHFklsc9wRSguYqxNOGNsy+n7yKBQuVSFBdzBD9iO00LVk2Icf2Ndy7x9OXnGCWVU2dV9jLPY0oFoA24IZdz3bZ5fzsk3TfFk6jV+xQEMdFmdn4Rt80Lnt/tHTu4mzOec9BeOW7nU2oF7EdGuDuPWyB7HU5uXceBbXOtCHuMznBLeyKIQn7d3Gb8rp+jUMg26kEEwfI1/onl/WvlgO1pUeJat8ga/4Uft2wnDuCpElXTOXR9Hj3a4XkD0PPk/zjdCyDuGL/AdnrSMuSXs3Sx4WEB4k2rCYWwXdY8yMdbhfQGO6UHLD4iyOItzifMs2CP7m4nxaFDo5VWF2znH7y/I84Bqk6xNOQUUrW9HUwdVpbVpfj+A89i7gvD/C3A0YgcTFYh+kfhaI6QCi3iHE9p/rJsL8kzETqoo3f7D50K8b332u4+30cECHEulW4zJksKfCydlp+dNISFLcakAx2SraHrTnljALzgkZIx55i5rT7Silg2hFLVswVHjpic1bTOnqGVjP8WYGl6lpKjl5VWM2l0XxqjlBW2Mvl+JZy2xuqEvf0L4AFMT7eh828pWAAAAAElFTkSuQmCC"/>
+	</defs>
+	<circle id="Ellipse 9" cx="16.836426" cy="16.836365" r="16.836355" fill="#F5FAFF" fill-opacity="1.000000"/>
+	<circle id="Ellipse 9" cx="16.836426" cy="16.836365" r="16.336355" stroke="#FFFFFF" stroke-opacity="0" stroke-width="1.000000"/>
+	<mask id="mask739_3559" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="33.672852" height="33.672699">
+		<rect id="telegram" width="33.672710" height="33.672710" fill="url(#pattern_739_35590)" fill-opacity="1.000000"/>
+	</mask>
+	<g mask="url(#mask739_3559)">
+		<circle id="Ellipse 8" cx="16.836426" cy="16.836365" r="16.836355" fill="#020202" fill-opacity="1.000000"/>
+		<circle id="Ellipse 8" cx="16.836426" cy="16.836365" r="16.336355" stroke="#FFFFFF" stroke-opacity="0" stroke-width="1.000000"/>
+	</g>
+</svg>

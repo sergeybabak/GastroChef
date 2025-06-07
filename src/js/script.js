@@ -22,7 +22,8 @@ async function loadLanguage(lang) {
 function applyTranslations() {
   for (const key in translations) {
     document.querySelectorAll(`.${key}`).forEach(el => {
-      el.textContent = translations[key];
+      // el.textContent = translations[key];
+      el.innerHTML = translations[key];
     });
   }
 }
@@ -118,25 +119,21 @@ async function run(direction) {
 
   if (typeof direction != 'number') { nextElement(direction); } else { num = direction; }
 
-  img[numActive].classList.remove('promo__img-active');
   text[numActive].style.opacity = 0; // обесцвечиваем текущий элемент (текст слева)
+  img[numActive].classList.remove('promo__img-active');
 
   setTimeout(() => {
     img[num - 1].classList.add('promo__img-active');
   }, 200);
-  // await delay(1000);
-
-  
+  await delay(1000);
 
   rings[numActive].classList.remove('promo__navigator-ring-active');
   rings[num - 1].classList.add('promo__navigator-ring-active');
 
-  
+  text[numActive].classList.remove('promo__descr-active');
   text[num - 1].classList.add('promo__descr-active');
   await delay(1000);
 
-  text[numActive].classList.remove('promo__descr-active');
-  await delay(500);
   text[numActive].removeAttribute('style');
 }
 
@@ -152,4 +149,14 @@ rings.forEach((item, i) => {
   item.addEventListener('click', () => {
     run(i + 1);
   })
+});
+
+const messenger = document.querySelector('.messenger__central'),
+      box = document.querySelector('.messenger__box'),
+      svg = document.querySelector('.messenger__central svg');
+
+messenger.addEventListener('click', (i) => {
+  svg.style.transition = messenger.classList.contains('messenger__central-active') ? 'all 4s' : 'all .5s';
+  box.classList.toggle('messenger__box-active');
+  messenger.classList.toggle('messenger__central-active');
 });
