@@ -1,0 +1,118 @@
+.footer {
+    margin: 150px 0 100px 0;
+    box-shadow: 0px 0px 30px 0px rgba(86, 86, 86, 0.25);
+    background: var(--F5FAFF);
+    padding: 40px 0;
+    font-family: Comfortaa;
+    font-size: 20px;
+    font-weight: 700;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 17px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin: 0 auto;
+
+        img {
+            margin-top: 20px;
+            width: 320px;
+        }
+
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &__contacts {
+        text-align: right;
+    }
+
+    &__icons {
+        margin: 30px 0 15px 0;
+        display: flex;
+        column-gap: 15px;
+        justify-content: end;
+
+        a {
+            display: block;
+            height: 100%;
+        }
+    }
+
+    &__phone {
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--64D370);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        margin: 100px 0 50px 0;
+        font-size: 14px;
+
+        ul {
+            row-gap: 12px;
+        }
+
+        &__logo {
+
+            img {
+                width: 270px;
+                margin-top: 0;
+            }
+
+            &-text {
+                margin-top: -15px;
+            }
+        }
+
+        &__contacts {
+
+            img {
+                width: 21px;
+                height: 21px;
+            }
+        }
+
+        &__icons {
+            margin: 15px 0 5px 0;
+            column-gap: 10px;
+        }
+        &__phone {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        margin: 60px 0 50px 0;
+        padding: 30px 0 50px 0;
+        &__wrapper {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        &__menu {
+            display: none;
+        }
+        &__contacts {
+            justify-items: center;
+            ul {
+                display: none;
+            }
+        }
+        &__icons {
+            margin: 30px 0 5px 0;
+        }
+    }
+}

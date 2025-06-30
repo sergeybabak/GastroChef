@@ -151,12 +151,264 @@ rings.forEach((item, i) => {
   })
 });
 
+//// messenger
 const messenger = document.querySelector('.messenger__central'),
-      box = document.querySelector('.messenger__box'),
-      svg = document.querySelector('.messenger__central svg');
+  box = document.querySelector('.messenger__box'),
+  svg = document.querySelector('.messenger__central svg');
 
 messenger.addEventListener('click', (i) => {
   svg.style.transition = messenger.classList.contains('messenger__central-active') ? 'all 4s' : 'all .5s';
   box.classList.toggle('messenger__box-active');
   messenger.classList.toggle('messenger__central-active');
+});
+
+//// main - tabs
+const programs = document.querySelectorAll('.diets__programs-btn'),
+  dietstab = document.querySelector('.diets__tabs'),
+  dietstabs = document.querySelectorAll('.diets__tabs-item'),
+  dietsweek = document.querySelectorAll('.diets__week span');
+var dietspoint = 1;
+
+import data from './json/diets.json' assert { type: 'json' };
+
+function setDiets(n, i = 0) {
+  console.log(dietspoint + ' ' + n + ' ' + i);
+  let tmp_value = '';
+  // переключаем программы
+  if ((dietspoint < 10 && n >= 10) || (dietspoint >= 10 && n < 10)) {
+    programs[0].classList.toggle('diets__programs-active');
+    programs[1].classList.toggle('diets__programs-active');
+    dietstab.classList.toggle('diets__tabs-special');
+  }
+  // переключаем табы
+  if (dietspoint != n) {
+    // активность таба диеты
+    dietstabs.forEach(it => it.classList.remove('diets__tabs-item-active'));
+    dietstabs[n - 1].classList.add('diets__tabs-item-active');
+
+    for (const [key, value] of Object.entries(data[n])) {
+      const k = `${key}`
+      if (k != 'diets__menu') {
+        document.querySelector('.' + k).innerHTML = `${value}`;
+      }
+    }
+  }
+  // переключаем дни недели
+  dietsweek.forEach(it => it.classList.remove('diets__week-active'));
+  dietsweek[i].classList.add('diets__week-active');
+
+  for (let m in data[n].diets__menu[i]) {
+    tmp_value += data[n].diets__menu[i][m];
+  }
+  document.querySelector('.diets__menu').innerHTML = tmp_value;
+
+  dietspoint = n;
+}
+
+programs.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    i ? setDiets(10, 0) : setDiets(1, 0);
+  });
+});
+
+dietstabs.forEach((item, i) => {
+  item.addEventListener('click', () => {
+    setDiets(i + 1, 0);
+  });
+});
+
+
+dietsweek.forEach((cn, i) => {
+  cn.addEventListener('click', () => {
+    setDiets(dietspoint, i);
+  })
+});
+
+// валидация input в order
+const order_btn = document.querySelector('.order__btn_phone'),
+  input_name = document.querySelector('.order__input_name'),
+  input_phone = document.querySelector('.order__input_phone'),
+  input_condition = document.querySelector('.order__conditions'),
+  input_name_input = input_name.querySelector('input'),
+  input_phone_input = input_phone.querySelector('input'),
+  input_condition_input = input_condition.querySelector('input');
+
+order_btn.addEventListener('click', (e) => {
+  // input_name.classList.toggle('input-error');
+  e.preventDefault();
+  if (!input_name_input.validity.valid) {
+    input_name.classList.add('input-error');
+  }
+  if (!input_phone_input.validity.valid) {
+    input_phone.classList.add('input-error');
+  }
+  if (!input_condition_input.validity.valid) {
+    input_condition.classList.add('input-error');
+  }
+  input_name_input.addEventListener('input', () => {
+    input_name.classList.remove('input-error');
+  })
+  input_phone_input.addEventListener('input', () => {
+    input_phone.classList.remove('input-error');
+  })
+  input_condition_input.addEventListener('input', () => {
+    input_condition.classList.remove('input-error');
+  })
+  // input_name.classList.toggle('input-error', input_name.validity.valid);
+});
+
+//// аккордеон в order
+const order__question = document.querySelectorAll('.order__question'),
+  order__rightbox = document.querySelector('.order__rightbox');
+let point = 99;
+
+order__question.forEach((item, i) => {
+  item.addEventListener('click', (it) => {
+    order__question.forEach(it => { it.classList.remove('order__question-active') });
+
+    item.classList.toggle('order__question-active', i != point);
+    point = i;
+  })
+});
+// если слик был по order вне аккордеона (order__rightbox), то аккордеон сворачивается
+document.querySelector('.order').addEventListener('click', (e) => {
+  if (!order__rightbox.contains(e.target))
+    order__question.forEach(it => { it.classList.remove('order__question-active') });
+});
+
+//// показываем договор
+const modal_agr = document.querySelector('.modal__agr'),
+  agr_link = document.querySelectorAll('.terms');
+
+agr_link.forEach(link => {
+  link.addEventListener('click', () => {
+    overlay.classList.toggle('not-visible');
+    overlay.classList.toggle('is-visible');
+
+    document.body.classList.add('modal-open'); // запрет прокрутки основного окна
+
+    setTimeout(() => {
+      modal_agr.classList.toggle('not-display');
+      modal_agr.classList.toggle('is-display');
+    }, 1000);
+  })
+})
+
+document.querySelector('.modal__agr-close').addEventListener('click', () => {
+  overlay.classList.toggle('not-visible');
+  overlay.classList.toggle('is-visible');
+
+  modal_agr.classList.toggle('not-display');
+  modal_agr.classList.toggle('is-display');
+
+  document.body.classList.remove('modal-open');
+});
+
+//// левое меню
+const leftMenu = document.querySelectorAll('.left__menu a');
+
+leftMenu.forEach((it, i) => {
+  it.addEventListener('click', () => {
+    switch (i) {
+      case 0:
+        setDiets(1); break;
+      case 1:
+        console.log(i);
+        setDiets(9); break;
+      case 2:
+        setDiets(8); break;
+      case 3:
+        setDiets(11); break;
+      case 4:
+        setDiets(12, 0); break;
+    }
+  });
+});
+
+/// модальная форма заказа
+const orderBtn = document.querySelector('.order__btn_order'), // кнопка вызова модальной формы заказа
+  modelWin = document.querySelector('.modalorder'),
+  orderClose = document.querySelector('.modalorder_close'),
+  sendButton = document.querySelector('.modalorder_btn'),
+  sendForm = modelWin.querySelector('form'),
+  inputCombo = document.querySelectorAll('.modalorder_combo'),
+  inputList = document.querySelectorAll('.modalorder_combo>ul'),
+  mandatory = document.querySelectorAll('.modalorder_mand'), // валидируемые поля
+  err = document.querySelector('.modalorder_error');
+
+function closeOrder() {
+  overlay.classList.toggle('not-visible');
+  overlay.classList.toggle('is-visible');
+
+  modelWin.classList.toggle('not-display');
+  modelWin.classList.toggle('is-display');
+
+  document.body.classList.remove('modal-open');
+}
+// открытие формы заказа
+orderBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  sendForm.reset();
+  mandatory.forEach(it => { it.classList.remove('modalorder_mand-active'); });
+  err.classList.add('not-visible');
+  overlay.classList.toggle('not-visible');
+  overlay.classList.toggle('is-visible');
+
+  document.body.classList.add('modal-open'); // запрет прокрутки основного окна
+
+  modelWin.classList.toggle('not-display');
+  modelWin.classList.toggle('is-display');
+});
+// клик на коестике (закрытие формы)
+orderClose.addEventListener('click', () => {
+  closeOrder();
+});
+
+// comboBox-ы
+let flagSend = true; // флаг отправки формы
+
+inputCombo.forEach((item, i) => {
+  item.addEventListener('click', (e) => {
+    item.classList.toggle('modalorder_combo-active');
+  });
+});
+// выбор в комбобоксе
+inputList.forEach((item, i) => {
+  item.addEventListener('click', (e) => {
+    inputCombo[i].querySelector('button span').innerText = e.target.innerText;
+    inputCombo[i].querySelector('input').value = e.target.innerText;
+    mandatory[i + 2].classList.remove('modalorder_mand-active'); // убираем признак ошибки
+  });
+});
+// валидация
+sendForm.addEventListener('submit', e => {
+  if (flagSend) {
+    const formData = new FormData(sendForm);
+    console.log([...formData]); // выводим в консоль отправляемые данные
+  };
+  e.preventDefault(); // отменяем подстановку данных формы в адресную строку браузера
+});
+
+const inputCond = document.querySelector('.modalorder_form .order__conditions'); // кнопка радио по договору
+
+sendButton.addEventListener('click', () => {
+  flagSend = true;
+  console.log(inputCond);
+  mandatory.forEach(m => {
+    const m_input = m.querySelector('input');
+    m_input.addEventListener('input', () => { // если что-то вводится в input, убираем ошибку
+      m.classList.remove('modalorder_mand-active');
+    });
+    if ((!m_input.validity.valid) || (!m_input.value)) {
+      m.classList.add('modalorder_mand-active');
+      flagSend = false;
+    }
+    if (!inputCond.querySelector('input').validity.valid) inputCond.classList.add('order__conditions_error');
+  });
+
+  if (modelWin.querySelector('form').checkValidity() && flagSend) {
+    closeOrder();
+  } else {
+    err.classList.remove('not-visible');
+  }
 });

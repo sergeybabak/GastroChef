@@ -63,14 +63,21 @@
         font-size: 20px;
 
         &-btn {
+            display: block;
             @include box-green;
-            padding: 0 70px;
-            height: 60px;
-            border: none;
+            border: 3px solid var(--64D370);
+            padding: 13px 70px;
+            // height: 60px;
             font-family: Comfortaa;
             font-size: 26px;
             font-weight: 700;
             letter-spacing: 3px;
+            cursor: pointer;
+            &:hover {
+                color: var(--64D370);
+                background: var(--F5FAFF);
+                border: 3px solid var(--64D370);
+            }
         }
 
         span {
@@ -143,39 +150,42 @@
         margin: 0;
         padding-right: 310px;
 
-        &-left {
+        &-left, &-right {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+
             span {
                 display: block;
                 width: 10px;
                 height: 2px;
                 background-color: var(--64D370);
-                ;
             }
+            &:hover {
+                background: var(--64D370);
+                span {
+                    background: var(--F5FAFF);
+                }
+            }
+        }
 
+        &-left {
             span:first-child {
-                transform: translateY(-2px) rotate(-45deg);
+                transform: translateY(22px) rotate(-45deg) translateX(14px);
             }
 
             span:last-child {
-                transform: translateY(2px) rotate(45deg);
+                transform: translateY(6px) rotate(45deg) translateX(14px);
             }
         }
 
         &-right {
-            span {
-                display: block;
-                width: 10px;
-                height: 2px;
-                background-color: var(--64D370);
-                ;
-            }
-
             span:first-child {
-                transform: translateY(-2px) rotate(45deg);
+                transform: translateY(2px) rotate(45deg) translateX(16px);
             }
 
             span:last-child {
-                transform: translateY(2px) rotate(-45deg);
+                transform: translateY(28px) rotate(-45deg) translateX(16px);
             }
         }
 

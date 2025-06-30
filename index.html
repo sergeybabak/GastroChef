@@ -34,10 +34,10 @@
     <div class="main_page">
         <div class="left__menu">
             <ul>
-                <li><a href="#">
+                <li><a href="#diets">
                         <div>Ккал</div>
                     </a></li>
-                <li><a href="#">
+                <li><a href="#diets">
                         <div>
                             <svg width="39.194580" height="39.197372" viewBox="0 0 39.1946 39.1974" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -62,7 +62,7 @@
                             </svg>
                         </div>
                     </a></li>
-                <li><a href="#">
+                <li><a href="#diets">
                         <div>
                             <svg width="47.443848" height="61.503380" viewBox="0 0 47.4438 61.5034" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -91,7 +91,7 @@
                             </svg>
                         </div>
                     </a></li>
-                <li><a href="#">
+                <li><a href="#diets">
                         <div>
                             <svg width="52.385498" height="44.157303" viewBox="0 0 52.3855 44.1573" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -120,7 +120,7 @@
                             </svg>
                         </div>
                     </a></li>
-                <li><a href="#">
+                <li><a href="#diets">
                         <div>
                             5
                             <svg width="40.000000" height="18.000000" viewBox="0 0 40 18" fill="none"
@@ -148,12 +148,12 @@
         <div class="container">
             <div class="mainmenu">
                 <div class="mainmenu__wrapper">
-                    <div class="mainmenu__logo">
+                    <a class="mainmenu__logo">
                         <div class="mainmenu__logo-content">
                             <img src="/src/img/GastroChef.png" alt="imgLogo">
                             <div class="mainmenu__logo-text">healthy ration</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="mainmenu__panel"></div>
                     <div class="mainmenu__phone-circle">
                         <a href="tel:+380689494919">
@@ -196,15 +196,17 @@
                 </div>
             </div>
         </div>
-        <div class="promo">
+        <section class="promo">
             <div class="promo__leftcarousel">
                 <div class="promo__leftbox">
                     <div class="promo__descr promo__descr-1 promo__descr-active">
-                        <div class="promo__descr-big promo__descr-big_1LG">Detox программа – <span>вкусное очищение</span> организма
+                        <div class="promo__descr-big promo__descr-big_1LG">Detox программа – <span>вкусное
+                                очищение</span> организма
                         </div>
-                        <div class="promo__descr-small promo__descr-small_1LG">8 бутылочек <span>натуральных</span> смузи и фрешей.</div>
+                        <div class="promo__descr-small promo__descr-small_1LG">8 бутылочек <span>натуральных</span>
+                            смузи и фрешей.</div>
                         <div class="promo__cost">
-                            <button class="promo__cost-btn">Заказать</button>
+                            <a href="#order" class="promo__cost-btn">Заказать</a>
                             <div class="promo__cost-amount promo__cost-amount_1LG">
                                 Пробный день всего: <br>
                                 <span>427 грн</span>
@@ -216,7 +218,7 @@
                             Сервис правильного питания. <br> <span>Худей быстро!</span>
                         </div>
                         <div class="promo__cost">
-                            <button class="promo__cost-btn">Заказать</button>
+                            <a href="#order" class="promo__cost-btn">Заказать</a>
                             <div class="promo__cost-amount promo__cost-amount_2LG">
                                 Пробный день: <br>
                                 <span>-30%</span>
@@ -233,7 +235,7 @@
                             института физкультуры(НуфвсУ).
                         </div>
                         <div class="promo__cost">
-                            <button class="promo__cost-btn promo__cost-btn_LG">Мой инстаграм</button>
+                            <a href="#" class="promo__cost-btn promo__cost-btn_LG">Мой инстаграм</a>
                             <div class="promo__cost-amount promo__cost-amount_3LG">
                                 Всегда открыт <br> для клиентов
                             </div>
@@ -247,7 +249,7 @@
                             4 приема пищи.
                         </div>
                         <div class="promo__cost">
-                            <button class="promo__cost-btn">Заказать</button>
+                            <a href="#order" class="promo__cost-btn">Заказать</a>
                             <div class="promo__cost-amount promo__cost-amount_4LG">
                                 Пробный день <br>
                                 <span>от 490грн</span>
@@ -288,9 +290,9 @@
                         <div class="promo__navigator-right"><span></span><span></span></div>
                     </a></li>
             </ul>
-        </div>
+        </section>
 
-        <div class="services">
+        <section class="services">
             <div class="container">
                 <div class="services__wrapper">
                     <div class="services__items">
@@ -321,10 +323,651 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <section class="diets" id="diets">
+            <div class="container">
+                <div class="diets__programs">
+                    <div class="diets__programs-btn diets__programs-active">Программы питания</div>
+                    <div class="diets__programs-btn">Специальные программы</div>
+                </div>
+
+                <div class="diets__tabs">
+                    <div class="diets__tabs-item diets__tabs-item-active"><span>Express Fit</span>800 ккал</div>
+                    <div class="diets__tabs-item"><span>slim</span>1000 ккал</div>
+                    <div class="diets__tabs-item"><span>fitness</span>1300 ккал</div>
+                    <div class="diets__tabs-item"><span>balance</span>1600 ккал</div>
+                    <div class="diets__tabs-item"><span>balance +</span>1800 ккал</div>
+                    <div class="diets__tabs-item"><span>strong</span>2000 ккал</div>
+                    <div class="diets__tabs-item"><span>maxi fit</span>2400 ккал</div>
+                    <div class="diets__tabs-item"><span>Veggie</span></div>
+                    <div class="diets__tabs-item"><span>Fish</span></div>
+
+                    <div class="diets__tabs-item"><span>KETO</span>1400 ккал</div>
+                    <div class="diets__tabs-item"><span>KETO</span>1800 ккал</div>
+                    <div class="diets__tabs-item"><span>Диета №5</span></div>
+                </div>
+
+                <div class="diets__wrapper">
+                    <div class="diets__slide">
+                        <div class="diets__leftbox">
+                            <div class="diets__descr">
+                                <div class="diets__descr-title">
+                                    <span>Express Fit</span> 800 ккал
+                                </div>
+                                <div class="diets__descr-text">Программа здорового питания Express Fit. Идеально для:
+                                    похудения в кратчайшие сроки, повышения энергии и сил, снижения веса при сидячем
+                                    образе жизни.</div>
+                            </div>
+                            <div class="diets__table">
+                                <span>2 тестовых дня</span><span class="diets__table-sales diets-s1">745грн</span><span
+                                    class="diets-c1">690грн/день</span>
+                                <span>1 день</span><span class="diets__table-sales diets-s2">745грн</span><span
+                                    class="diets-c2">745грн/день</span>
+                                <span>7 дней</span><span class="diets__table-sales diets-s3">745грн</span><span
+                                    class="diets-c3">725грн/день</span>
+                                <span>14 дней</span><span class="diets__table-sales diets-s4">745грн</span><span
+                                    class="diets-c4">705грн/день</span>
+                                <span>30 дней</span><span class="diets__table-sales diets-s5">745грн</span><span
+                                    class="diets-c5">695грн/день</span>
+                            </div>
+                            <a href="#order" class="diets__btn">Заказать</a>
+                        </div>
+
+                        <div class="diets__rightbox">
+                            <div class="diets__week">
+                                <span
+                                    class="diets__week-active">ПH</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+                            </div>
+                            <div class="diets__menu">
+                                <div class="diets__time">Завтрак<span>7:00 - 9:00</span></div>
+                                <div class="diets__name"><span>Яйца скрэмбл с овощами и ветчиной</span></div>
+                                <div class="diets__cost"><span>120</span></div>
+
+                                <div class="diets__time">Обед<span>13:00 - 15:00</span></div>
+                                <div class="diets__name"><span>Шашлычок из индейки с томатным соусом</span><span>Салат с
+                                        куриной печенью, медовыми яблоками и черничнымм соусом (соус отдельно)</span>
+                                </div>
+                                <div class="diets__cost"><span>100</span> <span>100</span></div>
+
+                                <div class="diets__time">Полдник<span>16:00 - 17:30</span></div>
+                                <div class="diets__name"><span>Тыквенно-цитрусовый смузи с имбирем</span></div>
+                                <div class="diets__cost"><span>250</span></div>
+
+                                <div class="diets__time">Ужин<span>19:00 - 20:00</span></div>
+                                <div class="diets__name"><span>Запеченный красный окунь с овощами</span><span>Летний
+                                        салат с апельсиновой заправкой</span></div>
+                                <div class="diets__cost"><span>100</span><span>120</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="photo">
+            <h2 class="photo__title">Фото блюд</h2>
+
+            <div class="photo__wrapper">
+                <img src="/src/img/main/photo/01.png" alt="photo1">
+                <img src="/src/img/main/photo/02.png" alt="photo2">
+                <img src="/src/img/main/photo/03.png" alt="photo3">
+                <img src="/src/img/main/photo/04.png" alt="photo4">
+                <img src="/src/img/main/photo/05.png" alt="photo5">
+                <img src="/src/img/main/photo/06.png" alt="photo6">
+            </div>
+        </section>
+
+        <section class="order" id="order">
+            <div class="container">
+                <div class="order__wrapper">
+                    <div class="order__leftbox">
+                        <h2 class="order__title">Оформить заказ</h2>
+                        <div class="order__message">Обсудите все детали заказа по телефону <br> или сами укажите все
+                            подробности онлайн</div>
+
+                        <form class="order__form" novalidate>
+                            <div class="order__input_name">
+                                <label for="input-name" class="order__lname">Имя</label>
+                                <input type="text" id="input-name" name="input-name" placeholder="Имя" required>
+                                <span>Введите имя</span>
+                            </div>
+
+                            <div class="order__input_phone">
+                                <label for="input-phone" class="order__lphone">Номер телефона</label>
+                                <input type="tel" id="input-phone" name="input-phone" pattern="\+38\d{10}"
+                                    placeholder="+38XXXXXXXXX" required>
+                                <span>Введите номер телефона в нужном формате</span>
+                            </div>
+
+                            <label class="order__test">
+                                <input type="radio" name="test">
+                                <span class="order__radio"></span>Тест-день! Получить скидку -30%?
+                            </label>
+                            <label class="order__conditions">
+                                <input type="radio" name="conditions" required>
+                                <span class="order__radio"></span>
+                                <div>Согласен с <a class="terms" href="javascript:void(0)">условиями сотрудничества</a>
+                                </div>
+                            </label>
+                            <button class="order__btn order__btn_phone">Заказ по телефону</button>
+                            <span class="order__or">или</span>
+                            <button class="order__btn order__btn_order">Онлайн заказ</button>
+                        </form>
+                    </div>
+                    <div class="order__rightbox">
+                        <div class="order__questions">Часто задаваемые вопросы</div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Как осуществляется доставка правильного питания?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный
+                                Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер
+                                едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет
+                                повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Можно ли менять время доставки\место?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Время и место доставки здорового питания можно менять до 17.00 каждого дня. После 17.00
+                                перенести время доставки, или место доставки правильного питания невозможно, и если Вы
+                                не примите рацион по указанному раннее времени и адресу, Ваш пакет с рационом здорового
+                                питания будет списан.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Как и в чем приезжает еда?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Сбалансированное питание приезжает в индивидуальном пакете с 5 блюдами на день, которые
+                                упакованы отдельно в пищевые контейнеры.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Когда Вы готовите?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Здоровое питание готовиться только ночью, перед отправкой к Вам. Таким образом, Вы
+                                получаете
+                                блюда с пылу с жару!
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Какие продукты Вы используете?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Для приготовления рационов питания ипользуются только сертифицированные продукты от
+                                проверенных поставщиков, таким образом мы всегда гарантируем свежесть наших блюд.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Я буду есть одно и то же?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Меню правильного питания разработано на 4 недели без повторения блюд. В 4х недельных
+                                рационах более 250 рецептов.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>У меня аллергия и непереносимость определенных продуктов</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Мы заменяем абсолютно Бесплатно 1 ингредиент в Вашем рационе, на который у Вас есть
+                                аллергия
+                                или непереносимость. Сообщите эту информацию при заказе.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>В какой очередности все есть?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                К каждому пакету питания прилагается бланк-меню с точными указаниями временных
+                                промежутков
+                                приемов пищи и перечнем блюд. А так же на каждом ланчбоксе указано информаци к какому
+                                приему пищи относится блюдо.
+                            </div>
+                        </div>
+
+                        <div class="order__question">
+                            <button>
+                                <span>Можно ли замораживать программу?</span>
+                                <span class="order__question-arrow"><span></span><span></span></span>
+                            </button>
+                            <div class="order__request">
+                                Вы можете приостанавливать, 'замораживать' Ваш абонемент Здорового питания
+                                неограниченное количество раз.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__menu">
+                        <ul>
+                            <li><a href="#">Програмы питания</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Бизнес-ланчи</a></li>
+                            <li><a href="#">Gastro Shop</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__logo">
+                        <img src="/src/img/GastroChef.png" alt="imgLogo">
+                        <div class="footer__logo-text">сервис здорового питания</div>
+                    </div>
+                    <div class="footer__contacts">
+                        <ul>
+                            <li> <a class="terms" href="javascript:void(0)">Условия сотрудничества</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+
+                        <div class="footer__icons">
+                            <a href="#"><img src="/src/icons/social/instagram.svg" alt="instagram"></a>
+                            <a href="#"><img src="/src/icons/social/facebook.svg" alt="facebook"></a>
+                            <a href="#"><img src="/src/icons/social/viber.svg" alt="viber"></a>
+                            <a href="#"><img src="/src/icons/social/telegram.svg" alt="telegram"></a>
+                        </div>
+
+                        <a class="footer__phone" href="tel:+380689494919">+38 (068) 949 - 49 - 19</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    
+
+    <!-- модальное окно с договором -->
+    <div class="modal__agr not-display">
+        <div class="modal__agr-title">Договор публичной оферты
+            <span class="modal__agr-close"><span></span><span></span></span>
+        </div>
+        <div class="modal__agr-text">
+            <p>Цей договір укладений між Продавцем і користувачем послугами інтернет-сайту, в подальшому – «Покупець», є
+                договором доручення на замовлення, придбання та доставку Товарів і визначає основні умови замовлення,
+                придбання та доставки товарів через інтернет сайти <span>https://gastro-chef.com.ua/</span> Покупець,
+                діючи
+                з метою придбання Товару, приймає умови цього договору купівлі-продажу товарів (далі – Договір) на
+                наступних
+                умовах.</p>
+            <p><b>1. ВИЗНАЧЕННЯ ТЕРМІНІВ</b></p>
+            <p>1.1. Публічна оферта (далі – «Оферта») – публічна пропозиція Продавця, адресована невизначеному колу
+                осіб,
+                укласти з Продавцем договір купівлі-продажу товару дистанційним способом (далі – «Договір») на умовах,
+                що
+                містяться в цій Оферті, включаючи всі Додатки.</p>
+            <p>1.2. Замовлення – рішення Покупця замовити товар і його доставку, оформлене в інтернет-магазині і / або
+                доручення на придбання і доставку товарів.</p>
+            <p>1.3. Сайт — інтернет сайт з доменним ім’ям gastro-chef.com.ua.</p>
+            <p>1.4. Продавець — ФОП Єрмоленко О.В. (код: 2771909406) або залучені треті особи. Продаж здійснюється зі
+                складу
+                Продавця. Реквізити та контакти знаходяться в кінці Договору.</p>
+            <p>1.5. Користувач (Покупець) — фізична особа, відвідувач Сайту, що здійснила Замовлення Товару для
+                особистих
+                потреб.</p>
+            <p>1.6. Товар — споживчі товари, готові страви та напої, що пропонуються до продажу на Сайті.</p>
+            <p><b>2. ЗАГАЛЬНІ ПОЛОЖЕННЯ</b></p>
+            <p>2.1. Наведена нижче інформація є офіційною пропозицією (офертою) Продавця Покупцю укласти договір
+                купівлі-продажу товарів. Зазначений договір є публічним. Відповідно до статті 633 Цивільного кодексу
+                України
+                його умови однакові для всіх Покупців.</p>
+            <p>2.2. Згідно зі статтею 642 Цивільного Кодексу України повним і беззастережним прийняттям умов даної
+                пропозиції (оферти), що підтверджує укладення Договору купівлі-продажу товарів на запропонованих нижче
+                умовах, є факт оформлення та підтвердження Замовлення.</p>
+            <p>2.3. Оформленням Замовлення Покупець підтверджує узгодження і безумовне прийняття ним умов цього
+                пропозиції
+                (оферти).</p>
+            <p>2.4. Укладаючи Договір Покупець підтверджує, що він цілком і повністю ознайомлений, і згоден з умовами
+                цієї
+                пропозиції (оферти), та дає свою згоду на збір, обробку та передачу персональних даних на умовах,
+                визначених
+                чинним законодавством України, та цим Договором.</p>
+            <p><b>3. ЦІНА ТОВАРУ І ОПЛАТА</b></p>
+            <p>3.1. Ціна на кожну позицію Товару вказана на сайті Інтернет-магазину.</p>
+            <p>3.2. Продавець має право в односторонньому порядку змінити ціну на будь-яку позицію Товару.</p>
+            <p>3.3. У разі зміни ціни на замовлений Товар Продавець зобов’язується проінформувати Покупця про зміну ціни
+                Товару.</p>
+            <p>3.4. Покупець має право підтвердити або анулювати Замовлення на придбання Товару, якщо ціна змінена
+                Продавцем
+                після оформлення Замовлення.</p>
+            <p>3.5. Зміна Продавцем ціни на оплачений Покупцем Товар не допускається.</p>
+            <p>3.6. Продавець вказує вартість доставки Товару на сайті Інтернет-магазину або повідомляє Покупцеві при
+                оформленні замовлення Оператором.</p>
+            <p>3.7. Зобов’язання Покупця по оплаті Товару вважаються виконаними з моменту надходження Продавцю коштів.
+            </p>
+            <p>3.8. Ціна Товару зазначена в гривнях.</p>
+            <p>3.9. Ціна товару не включає в себе комісію і додаткові збори банків та платіжних систем. Покупець
+                самостійно
+                і за свій рахунок сплачує такі збори. Розмір комісії або додаткового збору повідомляє відповідний банк
+                та
+                платіжна система</p>
+            <p>3.10. Покупець може сплатити за Товар онлайн або в момент отримання товару кур’єром. Вибір оплати
+                здійснюється при оформлені Замовлення Товару.</p>
+            <p>3.11. Якщо в Замовлені є алкогольні Товари, зазначені на Сайті, то Покупець може сплатити за все
+                Замовлення
+                виключно готівкою кур’єру в момент отримання товару.</p>
+            <p>3.12. При сплаті за Товар онлайн Покупець перенаправляється на платіжний сервіс LiqPay, де Покупець має
+                змогу
+                сплатити за Замовлення за допомогою карток платіжних систем Visa та Mastercard.</p>
+            <p>3.13. Продавець має право надавати знижки на Товари. Умови знижок зазначаються Продавцем та можуть бути
+                змінені Продавцем в односторонньому порядку.</p>
+            <p><b>4. ОФОРМЛЕННЯ ЗАМОВЛЕННЯ</b></p>
+            <p>4.1. Замовлення Товару здійснюється Покупцем через Оператора по телефону зазначеному на Сайті, через
+                сервіс
+                Сайту або через сторінки Сайту у соціальних мережах.</p>
+            <p>4.2. При здійсненні замовлення на сайті Інтернет-магазину Покупець зобов’язується надати наступну
+                реєстраційну інформацію:</p>
+            <p>4.2.1. прізвище, ім’я, по батькові Покупця або вказаної ним особи (одержувача);</p>
+            <p>4.2.2. адреса, за якою слід доставити Товар (якщо доставка до адреси Покупця);</p>
+            <p>4.2.3. адреса електронної пошти;</p>
+            <p>4.2.4. контактний телефон.</p>
+            <p>4.3. Найменування, кількість, ціна обраного Покупцем Товару вказуються в кошику Покупця на Сайті
+                Інтернет-магазину.</p>
+            <p>4.4. Якщо Продавцю необхідна додаткова інформація, він має право запросити її у Покупця. У разі ненадання
+                необхідної інформації Покупцем, Продавець не несе відповідальності за надання якісної послуги Покупцю
+                при
+                придбанні чи доставці Товарів.</p>
+            <p>4.5. При оформленні Замовлення через Оператора Покупець зобов’язується надати інформацію, зазначену в п.
+                4.2.
+                цієї Оферти.</p>
+            <p>4.6. Ухвалення Покупцем умов цієї Оферти здійснюється за допомогою внесення Покупцем відповідних даних в
+                реєстраційну форму на сайті Інтернет-магазину або при оформленні Замовлення через Оператора. Після
+                оформлення Замовлення через Оператора дані про Покупця реєструються в базі даних Продавця.</p>
+            <p>4.7. Покупець несе відповідальність за достовірність наданої інформації при оформленні Замовлення.</p>
+            <p>4.8. Договір купівлі-продажу дистанційним способом між Продавцем і Покупцем вважається укладеним з
+                моменту
+                електронного оформлення замовлення на сервісі сайту інтернет-магазину, або видачі Продавцем Покупцеві
+                касового або товарного чека або іншого документа, що підтверджує оплату Товару.</p>
+            <p><b>5. ДОСТАВКА І ПЕРЕДАЧА ТОВАРУ ПОКУПЦЮ</b></p>
+            <p>5.1. Доставка Товару здійснюється шляхом доставки кур’єром по м. Києву. Зона доставки - м.Київ.</p>
+            <p>5.2. Моментом переходу права власності на Товар вважається момент передачі Товару Покупцю, або особі,
+                зазначеної в Замовленні в якості отримувача. В момент переходу права власності Продавець вважається
+                таким,
+                що виконав свої обов’язки за Договором.</p>
+            <p>5.3. Доставка Товару є окремою послугою, та жодним чином не відноситься до продажу Товару.</p>
+            <p>5.4. Доставка раціонів здорового харчування здійснюється щодня з 6.00 до 10.00 в обраний Вами годинний
+                діапазон. Час очікування кур'єра за адресою становить 10 хв. Далі кур'єр їде на наступну адресу. Якщо
+                Вас не
+                було за адресою або Ви не вийшли на зв'язок, пакет повторно може бути доставлений до Вас на таксі за Ваш
+                рахунок або буде списаний.</p>
+            <p><b>6. ПОВЕРНЕННЯ ТОВАРУ</b></p>
+            <p>6.1. Продовольчі товари, доступні на Сайті для Замовлення, не підлягають обміну та поверненню відповідно
+                до
+                Постанови КМУ N172 від 19.03.1994 «Про реалізацію окремих положень Закону України «Про захист прав
+                споживачів» зі змінами та доповненнями.</p>
+            <p>6.2. Під час прийому Товару Покупець здійснює огляд на відповідність асортименту, комплектності та якості
+                та
+                наявності дефектів на упаковці. У разі невідповідності Покупець може відмовитися від Товару.</p>
+            <p>6.3. Час і місце доставки здорового харчування можна змінювати до 17.00 кожного дня. Після 17.00
+                скасувати,
+                перенести час доставки, або місце доставки правильного харчування неможливо, і якщо Ви не прийміть
+                раціон за
+                вказаною раннє часу і адресою, Ваш пакет з раціоном здорового харчування буде списаний</p>
+            <p><b>7. ВІДПОВІДАЛЬНІСТЬ СТОРІН</b></p>
+            <p>7.1. Продавець не несе відповідальності за шкоду, заподіяну Покупцеві внаслідок неналежного використання
+                Товарів, порушення розумного терміну зберігання, характерного для відповідної категорії Товарів, або з
+                інших
+                причин, що не залежать від Продавця.</p>
+            <p>7.2. Продавець не несе відповідальності за неналежне, несвоєчасне виконання Замовлень і своїх зобов’язань
+                в
+                разі надання Покупцем недостовірної або помилкової інформації.</p>
+            <p>7.3. Продавець і Покупець несуть відповідальність за виконання своїх зобов’язань відповідно до чинного
+                законодавства України і положень цього Договору.</p>
+            <p>7.4. Продавець або Покупець звільняються від відповідальності за повне або часткове невиконання своїх
+                зобов’язань, якщо невиконання є наслідком форс-мажорних обставин як: війна або військові дії, землетрус,
+                повінь, пожежа та інші стихійні лиха, що виникли незалежно від волі Продавця і / або Покупця після
+                укладення
+                цього договору. Сторона, яка не може виконати свої зобов’язання, негайно повідомляє про це іншу Сторону.
+            </p>
+            <p><b>8. ПЕРСОНАЛЬНІ ДАНІ</b></p>
+            <p>8.1. Персональні дані збираються і обробляються з метою надання Покупцям доступу до Сайту, обробки
+                Замовлень
+                Покупців, здійснення за виконання Замовлень, взаєморозрахунків між Сторонами, інформування (у тому числі
+                рекламними матеріалами), а також інших дій, пов’язаних з такими цілями.</p>
+            <p>8.2. Дозвіл на обробку персональних даних діє протягом усього терміну дії Договору, а також протягом
+                необмеженого терміну після закінчення його дії. Крім цього, укладенням Договору Покупець підтверджує, що
+                він
+                повідомлений (без додаткового повідомлення) про права, встановлених Законом України “Про захист
+                персональних
+                даних”, про цілі збору даних, а також про те, що його персональні дані передаються Продавцю з метою,
+                визначеною у цьому Договорі, а також з метою виконання умов цього Договору, можливості проведення
+                взаєморозрахунків, а також для отримання рахунків, актів та інших документів.</p>
+            <p>8.3. Покупець також погоджується з тим, що Продавець має право надавати доступ та передавати, його
+                персональні дані третім особам без будь-яких додаткових повідомлень Покупця, не змінюючи при цьому мету
+                обробки персональних даних. Обсяг прав Покупця, як суб’єкта персональних даних відповідно до Закону
+                України
+                “Про захист персональних даних” йому відомий і зрозумілий.</p>
+            <p>8.4. Покупець погоджується з тим, що Продавець має право на відправлення рекламних повідомлень,
+                просування
+                Товару.</p>
+        </div>
+    </div>
+
+    <div class="modalorder not-display">
+        <div class="modalorder_error not-visible">Заполните все поля правильно</div>
+        <div class="modalorder_close"><span></span><span></span></div>
+
+        <form action="" class="modalorder_form">
+            <div class="modalorder_leftbox">
+                <div class="modalorder_input modalorder_name modalorder_mand">
+                    <input type="text" name="om-name" placeholder="Имя" required></input>
+                </div>
+
+                <div class="modalorder_input modalorder_phone modalorder_mand">
+                    <input type="tel" name="om-phone" attern="\+38\d{10}" placeholder="+38XXXXXXXXX" required></input>
+                </div>
+
+                <input type="email" name="om-email" class="modalorder_input modalorder_email"
+                    placeholder="Электронный адрес">
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input">
+                        <span>Программы питания</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                    </button>
+                    <ul>
+                        <li>Express Fit 800 ккал</li>
+                        <li>Slim 1000 ккал</li>
+                        <li>fitness 1300 ккал</li>
+                        <li>Balance 1600 ккал</li>
+                        <li>Balance+ 1800 ккал</li>
+                        <li>Strong 2000 ккал</li>
+                        <li>Maxi Fit 2400 ккал</li>
+                        <li>Veggie</li>
+                        <li>Fish</li>
+                    </ul>
+                </div>
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input">
+                        <span>Специальные программы</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                    </button>
+                    <ul>
+                        <li>Кето 1400 ккал</li>
+                        <li>Кето 1800 ккал</li>
+                        <li>ДИЕТА №5</li>
+                    </ul>
+                </div>
+
+                <div class="modalorder_address">
+                    <div class="modalorder_input modalorder_street modalorder_mand">
+                        Улица:<input type="text" name="om-street" placeholder="Название" required>
+                    </div>
+                    <div class="modalorder_input modalorder_house modalorder_mand">
+                        Дом:<input type="text" name="om-house" placeholder="33" required>
+                    </div>
+                    <div class="modalorder_input modalorder_floor">
+                        Этаж:<input type="text" name="om-floor" placeholder="3">
+                    </div>
+                </div>
+                <div class="modalorder_address">
+                    <div class="modalorder_input modalorder_appart">
+                        Квартира:<input type="text" name="om-appart" placeholder="33">
+                    </div>
+                    <div class="modalorder_input modalorder_front">
+                        Парадная:<input type="text" name="om-front" placeholder="333">
+                    </div>
+                    <div class="modalorder_input modalorder_inter">
+                        Домофон:<input type="text" name="om-inter" placeholder="333">
+                    </div>
+                </div>
+
+                <label class="order__test">
+                    <input type="radio" name="test">
+                    <span class="order__radio"></span>Тест-день! Получить скидку -30%?
+                </label>
+                <label class="order__conditions">
+                    <input type="radio" name="conditions" required>
+                    <span class="order__radio"></span>
+                    <div>Согласен с <a class="terms" href="javascript:void(0)">условиями сотрудничества</a>
+                    </div>
+                </label>
+
+                <button class="modalorder_btn">Заказать</button>
+            </div>
+
+            <div class="modalorder_rightbox">
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input modalorder_mand">
+                        <span>Время доставки</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                        <input type="hidden" name="mo-time">
+                    </button>
+                    <ul>
+                        <li>06:00-07:00</li>
+                        <li>06:30-07:30</li>
+                        <li>07:00-08:00</li>
+                        <li>07:30-08:30</li>
+                        <li>08:00-09:00</li>
+                        <li>08:30-09:30</li>
+                        <li>09:00-10:00</li>
+                    </ul>
+                    <!-- <input type="hidden" name="mo-time" required> -->
+                </div>
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input  modalorder_mand">
+                        <span>Количество дней заказа</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                        <input type="hidden" name="mo-days">
+                    </button>
+                    <ul class="modalorder_combo-scroll">
+                        <li>2 тестовых дня</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ul>
+                </div>
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input modalorder_mand">
+                        <span>Способ оплаты</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                        <input type="hidden" name="mo-pay">
+                    </button>
+                    <ul>
+                        <li>Наличкой</li>
+                        <li>Картой по реквизитам</li>
+                    </ul>
+                </div>
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input modalorder_mand">
+                        <span>Мне нужны приборы</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                        <input type="hidden" name="mo-device">
+                    </button>
+                    <ul>
+                        <li>Да, нужны</li>
+                        <li>Нет, не нужно</li>
+                    </ul>
+                </div>
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input modalorder_mand">
+                        <span>Откуда узнали о нас</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                        <input type="hidden" name="mo-source">
+                    </button>
+                    <ul>
+                        <li>Google</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Друзья</li>
+                        <li>Другое</li>
+                    </ul>
+                </div>
+                <div class="modalorder_input modalorder_wishes">
+                    Пожелания:<input type="text" name="om-wishes" placeholder="Название">
+                </div>
+                <div class="modalorder_combo">
+                    <button type="button" class="modalorder_input">
+                        <span>Как с вами связаться?</span>
+                        <span class="input-arrow"><span></span><span></span></span>
+                    </button>
+                    <ul>
+                        <li>По телефону</li>
+                        <li>Электронная почта</li>
+                        <li>Telegram</li>
+                        <li>Viber</li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <script type="module" src="/src/js/script.js"></script>
 </body>
 

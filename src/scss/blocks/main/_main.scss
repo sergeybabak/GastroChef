@@ -1,62 +1,336 @@
+@use '/src/scss/base/mixins' as *;
+
 .main_page {
     position: relative;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 50px;
     overflow: hidden;
+    @media screen and (max-width: 1280px) {
+        padding-top: 30px;
+    }
 }
+
 .circle-big {
     position: absolute;
     width: 1294px;
     height: 1294px;
     left: 950px;
-    // right: -320px;
     top: -100px;
     border-radius: 100%;
     background-color: var(--64D370);
     box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.4);
 }
+
 .circle-small {
     position: absolute;
     width: 545px;
     height: 545px;
-    left: -219px;
-    top: 1224px;
+    right: 1580px;
+    top: 1074px;
     border-radius: 100%;
     background-color: rgba(38, 240, 58, 0.1);
 }
+
 .ring-big {
     position: absolute;
     width: 530px;
     height: 530px;
-    right: -65px;
-    top: 1952px;
+    left: 1440px;
+    top: 1802px;
     border-radius: 100%;
     border: 30px solid rgba(38, 240, 58, 0.1);
 }
+
 .ring-small {
     position: absolute;
     width: 300px;
     height: 300px;
-    left: 5px;
-    top: 2427px;
+    right: 1600px;
+    top: 2370px;
     border-radius: 100%;
     border: 20px solid rgba(38, 240, 58, 0.1);
 }
+
 .circle-medium {
     position: absolute;
     width: 603px;
     height: 603px;
-    right: -90px;
-    top: 3003px;
+    left: 1394px;
+    top: 2870px;
     border-radius: 100%;
     background-color: rgba(38, 240, 58, 0.1);
 }
+
 .ring-medium {
     position: absolute;
     width: 519px;
     height: 519px;
-    left: -350px;
-    top: 3475px;
+    right: 1750px;
+    top: 3419px;
     border-radius: 100%;
     border: 33px solid rgba(38, 240, 58, 0.1);
+}
+
+.modal__agr {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 600px);
+    height: calc(100vh - 100px);
+    border: 2px solid var(--64D370);
+    background: var(--F5FAFF);
+    overflow: hidden;
+    z-index: 4;
+
+    &-title {
+        position: relative;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        text-transform: uppercase;
+    }
+
+    &-close {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 15px;
+            height: 2px;
+            background: #000;
+
+            &:first-child {
+                transform: translateY(2px) rotate(45deg);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &-text {
+        margin-top: 10px;
+        padding: 0 20px 70px 20px;
+        overflow-y: scroll;
+        height: 100%;
+        background: var(--DEE6EE);
+        font-size: 14px;
+
+        span {
+            color: blue;
+        }
+    }
+
+    @media screen and (max-width: 1536px) {
+        width: calc(100vw - 400px);
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: calc(100vw - 200px);
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: calc(100vw - 100px);
+    }
+
+    @media screen and (max-width: 768px) {
+        width: calc(100vw - 20px);
+        font-size: 12px;
+    }
+}
+
+.modalorder {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    &_form {
+        display: flex;
+        margin-top: 40px;
+        column-gap: 20px;
+    }
+
+    &_leftbox,
+    &_rightbox {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 580px;
+    }
+
+    &_input,
+    &_error {
+        @include box-white;
+        padding: 10px 20px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        border: none;
+        outline: none;
+    }
+
+    &_error {
+        display: table;
+        background: var(--FE3666);
+        color: var(--F5FAFF);
+    }
+
+    &_name, &_phone {
+        position: relative;
+
+        input {
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            top: -3px;
+            left: -3px;
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--64D370);
+        }
+    }
+
+    &_address {
+        display: flex;
+        column-gap: 10px;
+        justify-content: space-between;
+
+        input {
+            border: none;
+            outline: none;
+            width: 30px;
+            padding: 0 2px;
+        }
+
+        &:last-child {
+            justify-content: start;
+        }
+    }
+
+    &_street {
+        flex: 1;
+
+        input {
+            width: 80%;
+        }
+    }
+
+    button.modalorder_input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .input-arrow {
+        @include arrow;
+    }
+
+    .order__test,
+    .order__conditions {
+        color: var(--F5FAFF);
+        margin: 0;
+    }
+
+    .order__test {
+        margin-top: 15px;
+    }
+
+    .order__conditions {
+        margin-top: -10px;
+        &_error {
+            span {
+                background: var(--FE3666);
+            }
+        }
+    }
+
+    &_btn {
+        @include box-green;
+        margin-top: 20px;
+        padding: 15px 95px;
+        width: fit-content;
+        font-family: Comfortaa;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        cursor: pointer;
+    }
+
+    &_input>input {
+        border: none;
+        outline: none;
+    }
+
+    &_wishes {
+        input {
+            width: 80%;
+        }
+    }
+
+    &_close {
+        width: 30px;
+        height: 30px;
+        @include close(30px, var(--F5FAFF));
+        cursor: pointer;
+        top: 20px;
+        right: 0;
+    }
+
+    &_combo {
+        position: relative;
+
+        ul {
+            position: absolute;
+            width: 100%;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: var(--64D370);
+            color: var(--F5FAFF);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 1;
+            display: none;
+
+            li {
+                cursor: pointer;
+            }
+        }
+
+        &-active {
+            ul {
+                display: flex;
+                max-height: 390px;
+            }
+        }
+
+        &-scroll {
+            overflow-y: scroll;
+        }
+    }
+    &_mand-active {
+        border: 3px solid var(--FE3666);
+        &:before {
+            background: var(--FE3666);
+        }
+    }
 }

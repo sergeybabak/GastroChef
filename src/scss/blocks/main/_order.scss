@@ -1,0 +1,319 @@
+@use '/src/scss/base/mixins' as *;
+
+.order {
+    margin-top: 150px;
+
+    &__wrapper {
+        display: flex;
+        column-gap: 82px;
+    }
+
+    &__leftbox {
+        width: 418px;
+    }
+
+    &__title {
+        margin-top: 17px;
+        font-family: Comfortaa;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__message {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    &__form {
+        margin-top: 30px;
+
+        #input-name,
+        #input-phone {
+            position: relative;
+            margin-top: 5px;
+            width: 100%;
+            border-radius: 190px;
+            background: var(--DEE6EE);
+            border: none;
+            outline: none;
+            padding: 10px 50px 10px 20px;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    &__input_name,
+    &__input_phone {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            right: 20px;
+            top: 38px;
+            border-radius: 50%;
+            background: var(--64D370);
+            z-index: 2;
+        }
+
+        span {
+            display: block;
+            margin: 5px 0 0 20px;
+            color: red;
+            opacity: 0;
+            font-size: 12px;
+        }
+    }
+
+    .input-error {
+        label {
+            color: var(--F35353);
+        }
+
+        &::before {
+            background: var(--F35353);
+        }
+
+        span {
+            opacity: 1;
+        }
+        .order__radio {
+            background: red;
+        }
+    }
+
+    &__lname,
+    &__lphone {
+        display: block;
+        margin-left: 18px;
+        font-family: Comfortaa;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        color: var(--64D370);
+    }
+
+    &__lphone {
+        margin-top: 30px;
+    }
+
+    &__test,
+    &__conditions {
+        display: block;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        font-family: Comfortaa;
+
+        input {
+            display: none;
+        }
+
+        span {
+            width: 26px;
+            height: 26px;
+            border: 7px solid var(--DEE6EE);
+            border-radius: 50%;
+        }
+
+        input:checked+span {
+            background: var(--64D370);
+        }
+    }
+
+    &__test {
+        margin-top: 37px;
+    }
+
+    &__conditions {
+        margin-top: 15px;
+        a {
+            color: var(--64D370);
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 14px 30px;
+        min-width: 324px;
+        font-family: Comfortaa;
+        font-size: 22px;
+        letter-spacing: 2.5px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--F5FAFF);
+            border: 1px solid var(--64D370);
+            color: var(--64D370);
+        }
+
+        &_phone {
+            @include box-white;
+            margin-top: 30px;
+            color: var(--64D370);
+            border: 1px solid var(--64D370);
+
+            &:hover {
+                @include box-green;
+            }
+        }
+
+        &_order {
+            @include box-green;
+            margin-top: 10px;
+        }
+    }
+
+    &__or {
+        display: block;
+        font-family: Comfortaa;
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 10px;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__rightbox {
+        flex: 1;
+    }
+
+    &__questions {
+        font-family: Comfortaa;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    &__question {
+        margin-top: 22px;
+        font-size: 16px;
+        button {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            @include box-white;
+            white-space: wrap;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-family: Montserrat;
+            font-size: inherit;
+            font-weight: 400;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        &-arrow {
+            @include arrow;
+        }
+        &-active {
+            .order__question-arrow {
+                transform: rotate(90deg);
+            }
+            .order__request {
+                padding: 20px;
+                height: auto;
+            }
+        }
+    }
+
+    &__request {
+        transition: all .5s;
+        border-radius: 15px;
+        box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+        background: var(--64D370);
+        color: var(--F5FAFF);
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1536px) {
+    .order {
+        &__wrapper {
+            column-gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .order {
+        margin-top: 100px;
+        &__wrapper {
+            flex-direction: column;
+            row-gap: 100px;
+            align-items: center;
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__message {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        &__test {
+            margin-top: 20px;
+        }
+        &__rightbox {
+            max-width: 690px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .order {
+        &__wrapper {
+            row-gap: 60px;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__leftbox {
+            width: 100%;
+        }
+        &__message {
+            width: 100%;
+            padding: 0;
+            font-size: 11px;
+        }
+        &__lphone {
+            margin-top: 20px;
+        }
+        &__test, &__conditions {
+            align-items: start;
+            column-gap: 15px;
+        }
+        &__btn {
+            min-width: 280px;
+            font-size: 18px;
+        }
+        &__questions {
+            font-size: 20px;
+        }
+        &__question {
+            margin-top: 20px;
+            font-size: 10px;
+            button {
+                height: 40px;
+            }
+        }
+    }
+}

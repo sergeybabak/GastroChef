@@ -1,0 +1,317 @@
+@use "/src/scss/base/mixins" as *;
+
+.diets {
+    margin-top: 100px;
+
+    &__programs {
+        display: flex;
+        column-gap: 20px;
+
+        &-btn {
+            padding: 17px 0;
+            text-align: center;
+            flex: 1;
+            font-family: Comfortaa;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            background: var(--DEE6EE);
+            border-radius: 190px;
+        }
+
+        &-active {
+            @include box-green;
+        }
+
+    }
+
+    &__tabs {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+
+        &-item {
+            cursor: pointer;
+
+            &-active {
+                animation: fontAnime .5s ease-in-out;
+                color: var(--64D370);
+            }
+
+            span {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 20px;
+                text-transform: uppercase;
+                margin-bottom: 7px;
+            }
+
+            &:nth-child(n+10):nth-child(-n+12) {
+                display: none;
+            }
+
+            &:hover {
+                color: var(--26F03A);
+            }
+        }
+
+        &-special {
+            justify-content: center;
+            column-gap: 100px;
+
+            .diets__tabs-item:nth-child(n+1):nth-child(-n+9) {
+                display: none;
+            }
+
+            .diets__tabs-item:nth-child(n+10):nth-child(-n+12) {
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper {
+        margin-top: 50px;
+    }
+
+    &__slide {
+        display: grid;
+        grid-template-columns: 33% 1fr;
+        column-gap: 20px;
+    }
+
+    &__leftbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__descr {
+        @include box-green;
+        // min-height: 250px;
+        padding: 30px 50px;
+        border-radius: 30px;
+        font-family: Montserrat;
+        font-size: 14px;
+        white-space: normal;
+
+        &-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-family: Comfortaa;
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    &__table {
+        margin-top: 50px;
+        grid-template-columns: repeat(3, auto);
+        row-gap: 15px;
+        grid-auto-rows: auto;
+        display: grid;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: 400;
+
+        &-sales {
+            text-decoration: line-through;
+        }
+    }
+
+    &__btn {
+        margin: 50px auto 0 auto;
+        @include box-green;
+        display: table;
+        padding: 14px 70px;
+        border: none;
+    }
+
+    &__rightbox {
+        flex: 1;
+    }
+    &__week {
+        @include box-white;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        font-family: Comfortaa;
+        font-size: 25px;
+        font-weight: 700;
+
+        span {
+            cursor: pointer;
+
+            &:hover {
+                color: var(--26F03A);
+            }
+        }
+
+        &-active {
+            color: var(--64D370);
+            animation: fontAnime .5s ease-in-out;
+        }
+    }
+
+    &__menu {
+        @include box-white;
+        position: relative;
+        white-space: normal;
+        margin-top: 20px;
+        border-radius: 30px;
+        padding: 30px 50px 40px 50px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 50px 20px;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 300;
+        background: var(--F5FAFF);
+        height: calc(100% - 78.75px);
+        // height: 87%;
+    }
+
+    &__time,
+    &__name,
+    &__cost {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__time {
+        font-size: 20px;
+        font-weight: 500;
+
+        span {
+            font-weight: 300;
+        }
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    .diets {
+        margin-top: 50px;
+        &__programs {
+            &-btn {
+                padding: 10px 0;
+                font-size: 14px;
+            }
+        }
+        &__tabs {
+            margin-top: 41px;
+            
+            &-item {
+                font-size: 8px;
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+        &__wrapper {
+            margin-top: 30px;
+        }
+        &__descr {
+            padding: 18px 30px 22px 30px;
+            font-size: 10px;
+            span {
+                font-size: 14px;
+            }
+            &-title {
+                margin-bottom: 11px;
+                font-size: 10px;
+            }
+        }
+        &__table {
+            margin-top: 30px;
+            font-size: 8px;
+            row-gap: 8px;
+        }
+        &__btn {
+            margin: 30px auto 0 auto;
+            padding: 9px 40px;
+            font-size: 14px;
+        }
+        &__week {
+            font-size: 10px;
+        }
+        &__menu {
+            margin-top: 11px;
+            padding: 17px 30px 23px 30px;
+            gap: 30px 20px;
+            font-size: 10px;
+            height: calc(100% - 52.75px);
+        }
+        &__time {
+            font-size: 8px;
+            span {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .diets {
+        &__programs {
+            flex-direction: column;
+            row-gap: 15px;
+        }
+        &__tabs {
+            flex-wrap: wrap;
+            row-gap: 18px;
+            &-item {
+                width: 33.3%;
+                span {
+                    margin: 0;
+                    line-height: 10px;
+                }
+            }
+        }
+        &__slide {
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+        &__table {
+            margin-top: 20px;
+            padding: 0 22px;
+            grid-template-columns: 1fr auto auto;
+            column-gap: 20px;
+        }
+        &__btn {
+            margin: 25px auto 0 auto;
+        }
+        &__week {
+            padding: 13px 16px;
+            font-size: 14px;
+        }
+        &__menu {
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 12px;
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+        }
+        &__time {
+            margin-top: 15px;
+            font-size: 14px;
+            flex-direction: row;
+            column-gap: 20px;
+            align-items: end;
+            span {
+                font-size: 12px;
+            }
+        }
+        &__cost {
+            display: none;
+        }
+    }
+}
