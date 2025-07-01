@@ -5,12 +5,14 @@
 @use "/src/scss/blocks/forall/animation";
 
 @use "/src/scss/blocks/global";
+
 // @use "/src/scss/blocks/forall/buttons";
 
 // menu
 @use "/src/scss/blocks/forall/mainmenu";
 @use "/src/scss/blocks/forall/leftmenu";
 @use "/src/scss/blocks/forall/messenger";
+@use "/src/scss/blocks/forall/modals";
 
 // main page
 @use "/src/scss/blocks/main/main";

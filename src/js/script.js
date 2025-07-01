@@ -334,7 +334,8 @@ const orderBtn = document.querySelector('.order__btn_order'), // кнопка в
   inputCombo = document.querySelectorAll('.modalorder_combo'),
   inputList = document.querySelectorAll('.modalorder_combo>ul'),
   mandatory = document.querySelectorAll('.modalorder_mand'), // валидируемые поля
-  err = document.querySelector('.modalorder_error');
+  err = document.querySelector('.modalorder_error'),
+  thanks = document.querySelector('.modalthanks');
 
 function closeOrder() {
   overlay.classList.toggle('not-visible');
@@ -407,8 +408,19 @@ sendButton.addEventListener('click', () => {
   });
 
   if (modelWin.querySelector('form').checkValidity() && flagSend) {
-    closeOrder();
+    modelWin.classList.toggle('not-display');
+    modelWin.classList.toggle('is-display');
+    thanks.classList.remove('not-display');
+    thanks.classList.add('is-display');
   } else {
     err.classList.remove('not-visible');
   }
+});
+// окно "Спасибо за заказ!"
+thanks.querySelector('a').addEventListener('click', () => {
+  overlay.classList.toggle('not-visible');
+  overlay.classList.toggle('is-visible');
+  thanks.classList.remove('is-display');
+  thanks.classList.add('not-display');
+  document.body.classList.remove('modal-open');
 });

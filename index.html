@@ -593,10 +593,10 @@
                         </ul>
 
                         <div class="footer__icons">
-                            <a href="#"><img src="/src/icons/social/instagram.svg" alt="instagram"></a>
-                            <a href="#"><img src="/src/icons/social/facebook.svg" alt="facebook"></a>
-                            <a href="#"><img src="/src/icons/social/viber.svg" alt="viber"></a>
-                            <a href="#"><img src="/src/icons/social/telegram.svg" alt="telegram"></a>
+                            <a href="https://www.instagram.com/gastrochef.kyiv/"><img src="/src/icons/social/instagram.svg" alt="instagram"></a>
+                            <a href="https://www.facebook.com/gastrochef.kyev"><img src="/src/icons/social/facebook.svg" alt="facebook"></a>
+                            <a href="viber://chat?number=%2B380689494919"><img src="/src/icons/social/viber.svg" alt="viber"></a>
+                            <a href="tg://resolve?domain=GastroChef_kyev"><img src="/src/icons/social/telegram.svg" alt="telegram"></a>
                         </div>
 
                         <a class="footer__phone" href="tel:+380689494919">+38 (068) 949 - 49 - 19</a>
@@ -773,199 +773,210 @@
     </div>
 
     <div class="modalorder not-display">
-        <div class="modalorder_error not-visible">Заполните все поля правильно</div>
-        <div class="modalorder_close"><span></span><span></span></div>
-
-        <form action="" class="modalorder_form">
-            <div class="modalorder_leftbox">
-                <div class="modalorder_input modalorder_name modalorder_mand">
-                    <input type="text" name="om-name" placeholder="Имя" required></input>
-                </div>
-
-                <div class="modalorder_input modalorder_phone modalorder_mand">
-                    <input type="tel" name="om-phone" attern="\+38\d{10}" placeholder="+38XXXXXXXXX" required></input>
-                </div>
-
-                <input type="email" name="om-email" class="modalorder_input modalorder_email"
-                    placeholder="Электронный адрес">
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input">
-                        <span>Программы питания</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                    </button>
-                    <ul>
-                        <li>Express Fit 800 ккал</li>
-                        <li>Slim 1000 ккал</li>
-                        <li>fitness 1300 ккал</li>
-                        <li>Balance 1600 ккал</li>
-                        <li>Balance+ 1800 ккал</li>
-                        <li>Strong 2000 ккал</li>
-                        <li>Maxi Fit 2400 ккал</li>
-                        <li>Veggie</li>
-                        <li>Fish</li>
-                    </ul>
-                </div>
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input">
-                        <span>Специальные программы</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                    </button>
-                    <ul>
-                        <li>Кето 1400 ккал</li>
-                        <li>Кето 1800 ккал</li>
-                        <li>ДИЕТА №5</li>
-                    </ul>
-                </div>
-
-                <div class="modalorder_address">
-                    <div class="modalorder_input modalorder_street modalorder_mand">
-                        Улица:<input type="text" name="om-street" placeholder="Название" required>
-                    </div>
-                    <div class="modalorder_input modalorder_house modalorder_mand">
-                        Дом:<input type="text" name="om-house" placeholder="33" required>
-                    </div>
-                    <div class="modalorder_input modalorder_floor">
-                        Этаж:<input type="text" name="om-floor" placeholder="3">
-                    </div>
-                </div>
-                <div class="modalorder_address">
-                    <div class="modalorder_input modalorder_appart">
-                        Квартира:<input type="text" name="om-appart" placeholder="33">
-                    </div>
-                    <div class="modalorder_input modalorder_front">
-                        Парадная:<input type="text" name="om-front" placeholder="333">
-                    </div>
-                    <div class="modalorder_input modalorder_inter">
-                        Домофон:<input type="text" name="om-inter" placeholder="333">
-                    </div>
-                </div>
-
-                <label class="order__test">
-                    <input type="radio" name="test">
-                    <span class="order__radio"></span>Тест-день! Получить скидку -30%?
-                </label>
-                <label class="order__conditions">
-                    <input type="radio" name="conditions" required>
-                    <span class="order__radio"></span>
-                    <div>Согласен с <a class="terms" href="javascript:void(0)">условиями сотрудничества</a>
-                    </div>
-                </label>
-
-                <button class="modalorder_btn">Заказать</button>
+        <div class="container">
+            <div class="modalorder__top">
+                <div class="modalorder_error not-visible">Заполните все поля правильно</div>
+                <div class="modalorder_close"><span></span><span></span></div>
             </div>
 
-            <div class="modalorder_rightbox">
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input modalorder_mand">
-                        <span>Время доставки</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                        <input type="hidden" name="mo-time">
-                    </button>
-                    <ul>
-                        <li>06:00-07:00</li>
-                        <li>06:30-07:30</li>
-                        <li>07:00-08:00</li>
-                        <li>07:30-08:30</li>
-                        <li>08:00-09:00</li>
-                        <li>08:30-09:30</li>
-                        <li>09:00-10:00</li>
-                    </ul>
-                    <!-- <input type="hidden" name="mo-time" required> -->
+            <form action="" class="modalorder_form">
+                <div class="modalorder_leftbox">
+                    <div class="modalorder_input modalorder_name modalorder_mand">
+                        <input type="text" name="om-name" placeholder="Имя" required></input>
+                    </div>
+
+                    <div class="modalorder_input modalorder_phone modalorder_mand">
+                        <input type="tel" name="om-phone" attern="\+38\d{10}" placeholder="+38XXXXXXXXX"
+                            required></input>
+                    </div>
+
+                    <input type="email" name="om-email" class="modalorder_input modalorder_email"
+                        placeholder="Электронный адрес">
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input">
+                            <span>Программы питания</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                        </button>
+                        <ul>
+                            <li>Express Fit 800 ккал</li>
+                            <li>Slim 1000 ккал</li>
+                            <li>fitness 1300 ккал</li>
+                            <li>Balance 1600 ккал</li>
+                            <li>Balance+ 1800 ккал</li>
+                            <li>Strong 2000 ккал</li>
+                            <li>Maxi Fit 2400 ккал</li>
+                            <li>Veggie</li>
+                            <li>Fish</li>
+                        </ul>
+                    </div>
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input">
+                            <span>Специальные программы</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                        </button>
+                        <ul>
+                            <li>Кето 1400 ккал</li>
+                            <li>Кето 1800 ккал</li>
+                            <li>ДИЕТА №5</li>
+                        </ul>
+                    </div>
+
+                    <div class="modalorder_address">
+                        <div class="modalorder_input modalorder_street modalorder_mand">
+                            Улица:<input type="text" name="om-street" placeholder="Название" required>
+                        </div>
+                        <div class="modalorder_input modalorder_house modalorder_mand">
+                            Дом:<input type="text" name="om-house" placeholder="33" required>
+                        </div>
+                        <div class="modalorder_input modalorder_floor">
+                            Этаж:<input type="text" name="om-floor" placeholder="3">
+                        </div>
+                    </div>
+                    <div class="modalorder_address">
+                        <div class="modalorder_input modalorder_appart">
+                            Квартира:<input type="text" name="om-appart" placeholder="33">
+                        </div>
+                        <div class="modalorder_input modalorder_front">
+                            Парадная:<input type="text" name="om-front" placeholder="333">
+                        </div>
+                        <div class="modalorder_input modalorder_inter">
+                            Домофон:<input type="text" name="om-inter" placeholder="333">
+                        </div>
+                    </div>
                 </div>
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input  modalorder_mand">
-                        <span>Количество дней заказа</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                        <input type="hidden" name="mo-days">
-                    </button>
-                    <ul class="modalorder_combo-scroll">
-                        <li>2 тестовых дня</li>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>12</li>
-                        <li>13</li>
-                        <li>14</li>
-                        <li>15</li>
-                        <li>16</li>
-                        <li>17</li>
-                        <li>18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                    </ul>
+
+                <div class="modalorder_rightbox">
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input modalorder_mand">
+                            <span>Время доставки</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                            <input type="hidden" name="mo-time">
+                        </button>
+                        <ul>
+                            <li>06:00-07:00</li>
+                            <li>06:30-07:30</li>
+                            <li>07:00-08:00</li>
+                            <li>07:30-08:30</li>
+                            <li>08:00-09:00</li>
+                            <li>08:30-09:30</li>
+                            <li>09:00-10:00</li>
+                        </ul>
+                        <!-- <input type="hidden" name="mo-time" required> -->
+                    </div>
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input  modalorder_mand">
+                            <span>Количество дней заказа</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                            <input type="hidden" name="mo-days">
+                        </button>
+                        <ul class="modalorder_combo-scroll">
+                            <li>2 тестовых дня</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li>31</li>
+                        </ul>
+                    </div>
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input modalorder_mand">
+                            <span>Способ оплаты</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                            <input type="hidden" name="mo-pay">
+                        </button>
+                        <ul>
+                            <li>Наличкой</li>
+                            <li>Картой по реквизитам</li>
+                        </ul>
+                    </div>
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input modalorder_mand">
+                            <span>Мне нужны приборы</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                            <input type="hidden" name="mo-device">
+                        </button>
+                        <ul>
+                            <li>Да, нужны</li>
+                            <li>Нет, не нужно</li>
+                        </ul>
+                    </div>
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input modalorder_mand">
+                            <span>Откуда узнали о нас</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                            <input type="hidden" name="mo-source">
+                        </button>
+                        <ul>
+                            <li>Google</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>Друзья</li>
+                            <li>Другое</li>
+                        </ul>
+                    </div>
+                    <div class="modalorder_input modalorder_wishes">
+                        Пожелания:<input type="text" name="om-wishes" placeholder="Название">
+                    </div>
+                    <div class="modalorder_combo">
+                        <button type="button" class="modalorder_input">
+                            <span>Как с вами связаться?</span>
+                            <span class="input-arrow"><span></span><span></span></span>
+                        </button>
+                        <ul>
+                            <li>По телефону</li>
+                            <li>Электронная почта</li>
+                            <li>Telegram</li>
+                            <li>Viber</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input modalorder_mand">
-                        <span>Способ оплаты</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                        <input type="hidden" name="mo-pay">
-                    </button>
-                    <ul>
-                        <li>Наличкой</li>
-                        <li>Картой по реквизитам</li>
-                    </ul>
+                <div class="modalorder_bottom">
+                    <label class="order__test">
+                        <input type="radio" name="test">
+                        <span class="order__radio"></span>Тест-день! Получить скидку -30%?
+                    </label>
+                    <label class="order__conditions">
+                        <input type="radio" name="conditions" required>
+                        <span class="order__radio"></span>
+                        <div>Согласен с <a class="terms" href="javascript:void(0)">условиями сотрудничества</a>
+                        </div>
+                    </label>
+
+                    <button class="modalorder_btn">Заказать</button>
                 </div>
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input modalorder_mand">
-                        <span>Мне нужны приборы</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                        <input type="hidden" name="mo-device">
-                    </button>
-                    <ul>
-                        <li>Да, нужны</li>
-                        <li>Нет, не нужно</li>
-                    </ul>
-                </div>
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input modalorder_mand">
-                        <span>Откуда узнали о нас</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                        <input type="hidden" name="mo-source">
-                    </button>
-                    <ul>
-                        <li>Google</li>
-                        <li>Instagram</li>
-                        <li>Facebook</li>
-                        <li>Друзья</li>
-                        <li>Другое</li>
-                    </ul>
-                </div>
-                <div class="modalorder_input modalorder_wishes">
-                    Пожелания:<input type="text" name="om-wishes" placeholder="Название">
-                </div>
-                <div class="modalorder_combo">
-                    <button type="button" class="modalorder_input">
-                        <span>Как с вами связаться?</span>
-                        <span class="input-arrow"><span></span><span></span></span>
-                    </button>
-                    <ul>
-                        <li>По телефону</li>
-                        <li>Электронная почта</li>
-                        <li>Telegram</li>
-                        <li>Viber</li>
-                    </ul>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
+    </div>
+
+    <div class="modalthanks not-display">
+        <span>Спасибо за заказ!</span>
+        <a href="javascript:void(0)">Закрыть</a>
     </div>
 
     <script type="module" src="/src/js/script.js"></script>

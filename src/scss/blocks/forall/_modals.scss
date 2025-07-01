@@ -1,0 +1,352 @@
+@use '/src/scss/base/mixins' as *;
+
+.modal__agr {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 600px);
+    height: calc(100vh - 100px);
+    border: 2px solid var(--64D370);
+    background: var(--F5FAFF);
+    overflow: hidden;
+    z-index: 4;
+
+    &-title {
+        position: relative;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        text-transform: uppercase;
+    }
+
+    &-close {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 15px;
+            height: 2px;
+            background: #000;
+
+            &:first-child {
+                transform: translateY(2px) rotate(45deg);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &-text {
+        margin-top: 10px;
+        padding: 0 20px 70px 20px;
+        overflow-y: scroll;
+        height: 100%;
+        background: var(--DEE6EE);
+        font-size: 14px;
+
+        span {
+            color: blue;
+        }
+    }
+
+    @media screen and (max-width: 1536px) {
+        width: calc(100vw - 400px);
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: calc(100vw - 200px);
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: calc(100vw - 100px);
+    }
+
+    @media screen and (max-width: 768px) {
+        width: calc(100vw - 20px);
+        font-size: 12px;
+    }
+}
+
+.modalorder {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 3;
+
+    &_form {
+        display: grid;
+        grid-template-columns: repeat(2, 580px);
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    &_leftbox,
+    &_rightbox {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &_input,
+    &_error {
+        @include box-white;
+        padding: 10px 20px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        border: none;
+        outline: none;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_error {
+        display: table;
+        background: var(--FE3666);
+        color: var(--F5FAFF);
+    }
+
+    &_close {
+        width: 30px;
+        height: 30px;
+        @include close(30px, var(--F5FAFF));
+        cursor: pointer;
+    }
+
+    &_name,
+    &_phone {
+        position: relative;
+
+        input {
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            top: -3px;
+            left: -3px;
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--64D370);
+        }
+    }
+
+    &_address {
+        display: flex;
+        column-gap: 10px;
+        justify-content: space-between;
+
+        input {
+            border: none;
+            outline: none;
+            width: 30px;
+            padding: 0 2px;
+        }
+
+        &:last-child {
+            justify-content: start;
+        }
+    }
+
+    &_street {
+        flex: 1;
+
+        input {
+            width: 80%;
+        }
+    }
+
+    button.modalorder_input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .input-arrow {
+        @include arrow;
+    }
+
+    .order__test,
+    .order__conditions {
+        color: var(--F5FAFF);
+        margin: 0;
+    }
+
+    .order__test {
+        margin-top: 15px;
+    }
+
+    .order__conditions {
+        margin-top: 15px;
+
+        &_error {
+            span {
+                background: var(--FE3666);
+            }
+        }
+    }
+
+    &_btn {
+        @include box-green;
+        margin-top: 40px;
+        padding: 15px 95px;
+        width: fit-content;
+        font-family: Comfortaa;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        cursor: pointer;
+    }
+
+    &_input>input {
+        border: none;
+        outline: none;
+    }
+
+    &_wishes {
+        input {
+            width: 80%;
+        }
+    }
+
+    &_combo {
+        position: relative;
+
+        ul {
+            position: absolute;
+            width: 100%;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: var(--64D370);
+            color: var(--F5FAFF);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 1;
+            display: none;
+
+            li {
+                cursor: pointer;
+            }
+        }
+
+        &-active {
+            ul {
+                display: flex;
+                max-height: 390px;
+            }
+        }
+
+        &-scroll {
+            overflow-y: scroll;
+        }
+    }
+
+    &_mand-active {
+        border: 3px solid var(--FE3666);
+
+        &:before {
+            background: var(--FE3666);
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        top: 100px;
+        width: 580px;
+
+        .container {
+            display: contents;
+        }
+
+        &_form {
+            grid-template-columns: 580px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+
+        .container {
+            display: block;
+        }
+
+        &_form {
+            grid-template-columns: 100%;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        &__top {
+            gap: 50px;
+        }
+
+        &_error {
+            white-space: wrap;
+        }
+
+        &_address {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+}
+// окно "Спасибо за заказ!"
+.modalthanks {
+    position: fixed;
+    padding: 80px 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc((100vh - 300px) /2);
+    width: 400px;
+    height: 300px;
+    @include box-white;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 3;
+
+    span {
+        display: block;
+    }
+
+    a {
+        margin-top: 50px;
+        display: block;
+        @include box-green;
+        padding: 10px 50px;
+    }
+
+    @media screen and (max-width: 576px) {
+        padding: 50px 20px;
+        width: 250px;
+        height: 200px;
+        font-size: 20px;
+        a {
+            margin: 30px auto 0 auto;
+            font-size: 18px;
+            display: table;
+        }
+    }
+}

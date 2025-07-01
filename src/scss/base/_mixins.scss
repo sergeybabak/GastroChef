@@ -74,7 +74,7 @@
   }
 }
 @mixin close($width,$color) {
-  position: absolute;
+  // position: absolute;
   span {
     width: calc($width);
     height: 3px;
