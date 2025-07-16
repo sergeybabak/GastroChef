@@ -1,0 +1,52 @@
+@use '/src/scss/base/mixins' as *;
+
+.aboutmain {
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    overflow: hidden;
+    .photo {
+        margin-top: 170px;
+    }
+}
+.aboutring1 {
+    @include ring(rgba(38, 240, 58, 0.1), 220px, 20px, 950px, 1000px, auto);
+}
+.aboutring2 {
+    @include ring(rgba(38, 240, 58, 0.1), 426px, 30px, 980px, 1600px, auto);
+}
+.aboutcircle1 {
+    @include circle(rgba(38, 240, 58, 0.1), 545px, 1050px, auto, 1150px);
+}
+.aboutring3 {
+    @include ring(rgba(38, 240, 58, 0.1), 530px, 30px, 1916px, 1432px, auto);
+}
+.aboutring4 {
+    @include ring(rgba(38, 240, 58, 0.1), 184px, 15px, 2750px, auto, 1478px);
+}
+.aboutcircle2 {
+    @include circle(rgba(38, 240, 58, 0.1), 603px, 2857px, 1080px, auto);
+}
+.aboutring5 {
+    @include ring(rgba(38, 240, 58, 0.1), 519px, 30px, 3366px, auto, 1662px);
+}
+.aboutring6 {
+    @include ring(rgba(38, 240, 58, 0.1), 184px, 15px, 3739px, 1253px, auto);
+}
+.aboutring7 {
+    @include ring(rgba(38, 240, 58, 0.1), 184px, 15px, 4300px, auto, 1300px);
+}
+.aboutring8 {
+    @include ring(rgba(38, 240, 58, 0.1), 519px, 30px, 4100px, 1657px, auto);
+}
+.aboutcircle3 {
+    @include circle(rgba(38, 240, 58, 0.1), 603px, 5140px, auto, 1500px);
+}
+@media screen and (max-width: 768px) {
+    .aboutmain {
+        padding-top: 30px;
+        .photo {
+            margin-top: 40px;
+        }
+    }
+}

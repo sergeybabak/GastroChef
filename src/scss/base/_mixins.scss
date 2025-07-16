@@ -88,3 +88,24 @@
     }
   }
 }
+
+@mixin ring($color, $width, $border, $top, $left, $right) {
+  position: absolute;
+  width: $width;
+  height: $width;
+  border: $border solid $color;
+  top: $top;
+  left: $left;
+  right: $right;
+  border-radius: 50%;
+}
+@mixin circle($color, $width, $top, $left, $right) {
+  position: absolute;
+  width: $width;
+  height: $width;
+  background: $color;
+  top: $top;
+  left: $left;
+  right: $right;
+  border-radius: 50%;
+}

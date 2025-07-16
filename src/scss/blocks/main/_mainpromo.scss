@@ -1,15 +1,16 @@
 @use "/src/scss/base/mixins" as *;
 
 .promo {
+    position: relative;
     display: grid;
     grid-template-columns: 609px auto;
-    grid-template-rows: auto 100px;
+    // grid-template-rows: auto 100px;
     justify-content: space-between;
-    padding: 30px 56px 0 15%;
+    padding: 0 56px 0 15%;
 
     &__leftcarousel {
         justify-self: start;
-        padding: 250px 0 0 0;
+        padding: 180px 0 0 0;
     }
 
     &__leftbox {
@@ -20,7 +21,6 @@
     &__descr {
         position: absolute;
         padding-left: 30px;
-        // padding: 0 0 30px 30px;
         top: 0;
         transition: all 1s ease-in-out;
         transform: translateX(-100%);
@@ -240,10 +240,6 @@
 
         @include promo-rightbox(530px, 25px, 0.75);
     }
-    .circle-big {
-        top: -300px;
-        left: 700px;
-    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -256,9 +252,6 @@
         @include promo-descr(28px, 16px);
 
         @include promo-rightbox(420px, 25px, 0.6);
-    }
-    .circle-big {
-        left: 550px;
     }
 }
 
@@ -310,16 +303,9 @@
             align-self: start;
         }
     }
-
-    .circle-big {
-        width: 765px;
-        height: 765px;
-        top: -100px;
-        left: 400px;
-    }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .promo {
         grid-template-columns: 240px auto;
         padding: 0 8px 0 15%;
@@ -337,13 +323,6 @@
         &__navigator {
             padding-top: 20px;
         }
-    }
-
-    .circle-big {
-        width: 600px;
-        height: 600px;
-        top: -100px;
-        left: 320px;
     }
 }
 
@@ -406,13 +385,5 @@
             grid-row: 3;
             padding: 0 0 0 30px;
         }
-    }
-
-    .circle-big {
-        width: 518px;
-        height: 518px;
-        top: -271px;
-        right: -195px;
-        left: auto;
     }
 }

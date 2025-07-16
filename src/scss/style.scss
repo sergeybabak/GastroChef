@@ -13,13 +13,19 @@
 @use "/src/scss/blocks/forall/leftmenu";
 @use "/src/scss/blocks/forall/messenger";
 @use "/src/scss/blocks/forall/modals";
+@use "/src/scss/blocks/forall/footer";
 
 // main page
 @use "/src/scss/blocks/main/main";
-@use "/src/scss/blocks/main/promo";
+@use "/src/scss/blocks/main/mainpromo";
 @use "/src/scss/blocks/main/services";
 @use "/src/scss/blocks/main/diets";
 @use "/src/scss/blocks/main/photo";
 @use "/src/scss/blocks/main/order";
-@use "/src/scss/blocks/main/footer";
+
+
+// about
+@use "/src/scss/blocks/about/aboutmmain";
+@use "/src/scss/blocks/about/aboutpromo";
+@use "/src/scss/blocks/about/aboutstory";
 

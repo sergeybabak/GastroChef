@@ -78,3 +78,52 @@ h1, h2 {
         padding: 0 map.get($container-paddings, s576);
     }
 }
+
+.totop {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    display: none;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 5px;
+        left: 5px;
+        border: 1px solid var(--64D370);
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+    &_arrow {
+        display: flex;
+        align-items: center;
+        background: var(--64D370);
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        border: 2px solid var(--F5FAFF);
+        cursor: pointer;
+        span {
+            margin-left: 5px;
+            display: block;
+            width: 25px;
+            height: 5px;
+            background: var(--F5FAFF);
+            border-radius: 2px;
+            &:first-child {
+                transform: translateX(5px) rotate(-45deg);
+            }
+            &:last-child {
+                transform: translateX(-10px) rotate(45deg);
+            }
+        }
+    }
+    &:hover {
+        a {
+            left: -80%;
+        }
+    }
+}
