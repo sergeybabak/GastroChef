@@ -8,6 +8,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
+        blog: resolve(__dirname, 'blog.html'),
+        blog1: resolve(__dirname+'blog/', '202507021222.html'),
       },
     },
   },

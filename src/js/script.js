@@ -1,20 +1,21 @@
 import '/src/scss/style.scss';
-import data from './json/diets.json' assert { type: 'json' };
+import data from '/src/js/json/diets.json' assert { type: 'json' };
+// import data from './json/diets.json' assert { type: 'json' };
+import { blog, setInterest } from '/src/js/parts/blog.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const page = window.location.pathname; // какая страница сейчас загружается
 
-  const orderBtn = document.querySelector('.order__btn_order'), // кнопка вызова модальной формы заказа
-    modelWin = document.querySelector('.modalorder'),
-    orderClose = document.querySelector('.modalorder_close'),
-    sendButton = document.querySelector('.modalorder_btn'),
-    sendForm = modelWin.querySelector('form'),
-    inputCombo = document.querySelectorAll('.modalorder_combo'),
-    inputList = document.querySelectorAll('.modalorder_combo>ul'),
-    mandatory = document.querySelectorAll('.modalorder_mand'), // валидируемые поля
-    err = document.querySelector('.modalorder_error'),
-    thanks = document.querySelector('.modalthanks');
+  // const orderBtn = document.querySelector('.order__btn_order'), // кнопка вызова модальной формы заказа
+  //   modelWin = document.querySelector('.modalorder'),
+  //   orderClose = document.querySelector('.modalorder_close'),
+  //   sendButton = document.querySelector('.modalorder_btn'),
+  //   sendForm = modelWin.querySelector('form'),
+  //   inputCombo = document.querySelectorAll('.modalorder_combo'),
+  //   inputList = document.querySelectorAll('.modalorder_combo>ul'),
+  //   mandatory = document.querySelectorAll('.modalorder_mand'), // валидируемые поля
+  //   err = document.querySelector('.modalorder_error'),
+  //   thanks = document.querySelector('.modalthanks');
 
   const programs = document.querySelectorAll('.diets__programs-btn'),
     dietstab = document.querySelector('.diets__tabs'),
@@ -89,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll('.mainmenu__lang-item');
 
   async function loadLanguage(lang) {
-    const res = await fetch(`./src/locales/${lang}.json`);
+    const res = await fetch(`/src/locales/${lang}.json`);
     translations = await res.json();
     currentLang = lang;
 
@@ -196,7 +197,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // подсвечивается в зависимости от открытой страницы
   if (page == '/about.html') mainMenu[3].classList.add('mainmenu__list_item-active')
-  else if (page == '/index.html') mainMenu[0].classList.add('mainmenu__list_item-active');
+  else if (page == '/index.html') mainMenu[0].classList.add('mainmenu__list_item-active')
+  else if (page == '/blog.html') mainMenu[4].classList.add('mainmenu__list_item-active');
 
   //// левое меню
   leftMenu.forEach((it, i) => {
@@ -304,17 +306,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // order  на двух страницах сайта
   if (page == '/index.html' || page == '/about.html') {
     /// модальная форма заказа
-    // const orderBtn = document.querySelector('.order__btn_order'), // кнопка вызова модальной формы заказа
-    //   modelWin = document.querySelector('.modalorder'),
-    //   orderClose = document.querySelector('.modalorder_close'),
-    //   sendButton = document.querySelector('.modalorder_btn'),
-    //   sendForm = modelWin.querySelector('form'),
-    //   inputCombo = document.querySelectorAll('.modalorder_combo'),
-    //   inputList = document.querySelectorAll('.modalorder_combo>ul'),
-    //   mandatory = document.querySelectorAll('.modalorder_mand'), // валидируемые поля
-    //   err = document.querySelector('.modalorder_error'),
-    //   thanks = document.querySelector('.modalthanks');
-
+    const orderBtn = document.querySelector('.order__btn_order'), // кнопка вызова модальной формы заказа
+      modelWin = document.querySelector('.modalorder'),
+      orderClose = document.querySelector('.modalorder_close'),
+      sendButton = document.querySelector('.modalorder_btn'),
+      sendForm = modelWin.querySelector('form'),
+      inputCombo = document.querySelectorAll('.modalorder_combo'),
+      inputList = document.querySelectorAll('.modalorder_combo>ul'),
+      mandatory = document.querySelectorAll('.modalorder_mand'), // валидируемые поля
+      err = document.querySelector('.modalorder_error'),
+      thanks = document.querySelector('.modalthanks');
+      
     function closeOrder() {
       overlay.classList.toggle('not-visible');
       overlay.classList.toggle('is-visible');
@@ -484,6 +486,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // blog
+  if (page == '/blog.html') {
+    blog();
+  }
+
+  //
+  if (page.includes('/blog/')) {
+    document.querySelector('.blogpage__link').addEventListener('click', () => {
+      sessionStorage.setItem('targetDiet', 0);
+    });
+
+    setInterest();
+  }
 });
 
 

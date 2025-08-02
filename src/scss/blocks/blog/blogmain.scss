@@ -1,0 +1,29 @@
+@use '/src/scss/base/mixins' as *;
+
+.blogmain {
+    padding-top: 52px;
+    .messenger {
+        top: 720px;
+        bottom: 0;
+    }
+}
+
+.blogcircle1 {
+    @include circle(var(--64D370), 640px, -370px, 1420px, auto);
+}
+.blogring {
+    @include ring(rgba(100, 211, 112, 0.5), 520px, 30px, 1395px, auto, 1635px);
+}
+.blogcircle2 {
+    @include circle(rgba(100, 211, 112, 0.3), 307px, 1336px, 1670px, auto);
+}
+
+@media screen and (max-width: 768px) {
+    .blogmain {
+    padding-top: 30px;
+    .messenger {
+        top: 410px;
+        bottom: 0;
+    }
+}
+}

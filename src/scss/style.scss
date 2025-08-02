@@ -29,3 +29,9 @@
 @use "/src/scss/blocks/about/aboutpromo";
 @use "/src/scss/blocks/about/aboutstory";
 
+// blog
+@use "/src/scss/blocks/blog/blogmain.scss";
+@use "/src/scss/blocks/blog/blog.scss";
+@use "/src/scss/blocks/blog/blogpage.scss";
+@use "/src/scss/blocks/blog/interest.scss";
+

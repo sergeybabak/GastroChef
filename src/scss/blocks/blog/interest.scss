@@ -1,0 +1,16 @@
+.interest {
+    margin-top: 110px;
+
+    &__title {
+        text-align: center;
+        font-family: Comfortaa;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
