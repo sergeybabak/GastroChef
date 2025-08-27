@@ -27,12 +27,14 @@
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
 </head>
 
-<body class="preload">
+<body class="preload" data-page="index">
 
     <div class="overlay not-visible"></div>
     <div class="main_page" id="mainpage">
 
         {{> leftmenu }}
+
+        {{> messenger }}
 
         <div class="circle-big"></div>
         <div class="circle-small"></div>
@@ -137,9 +139,6 @@
                         <div class="promo__navigator-right"><span></span><span></span></div>
                     </a></li>
             </ul>
-
-            {{> messenger }}
-
         </section>
 
         <section class="services">
